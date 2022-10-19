@@ -60,7 +60,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List clientesCon() throws Exception {
         String query = "SELECT RASON_CLIENT, RFC_CLIENT, NOMBRE_CLIENT, DIRECCION_CLIENT, TELEFONO_CLIET, CORREO_CLIENT, EMPRESA, RESP_REGISTRO, VALIDADO FROM CLIENT   ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new clientesMapper());
         return list;
@@ -68,14 +68,14 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
     
      public String dolarCambio() throws Exception {
         String query = "SELECT DOLAR FROM DOLAR   ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         String dolar = null;
         dolar = queryStringUnCampo(query);
         return dolar;
     }
       public String pass() throws Exception {
         String query = "SELECT PASSWORD FROM AUTORIZACION   ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         String dolar = null;
         dolar = queryStringUnCampo(query);
         return dolar;
@@ -83,7 +83,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List productosGral() throws Exception {
         String query = "SELECT NO_PARTE, PRODUCTO, CATEGORIA, DESCRIPCION, PRECIO, GANANCIA, PRECIO_PESO, MARCA, UNIDADMEDIDA, MONEDA, ALTERNATIVO, RESPONSABLE, PRECIO_CAL, TOTAL_BODEGAS, PROVEEDOR, CATEGORIA_GENERAL, FECHA_ACTUALIZA, CVE_SAT FROM FINAL_PRODUCTOS WHERE TOTAL_BODEGAS='0' ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new productosGralMapper());
         return list;
@@ -91,14 +91,14 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List productosBuscar(camposConBean camp) throws Exception {
         String query = "SELECT NO_PARTE, ANAQUEL, NIVEL, CATIDAD, NAME_BODEGA FROM BODEGAS WHERE NO_PARTE='" + camp.getCONSULTA_PARTE() + "' ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new productosBodegaMapper());
         return list;
     }
      public List catSat(camposConBean camp) throws Exception {
         String query = "SELECT   N_ID, CVE_SAT, DESCRIPCION FROM   CAT_CVESAT ORDER BY DESCRIPCION ASC ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new catSatMapper());
         return list;
@@ -106,21 +106,21 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
      
       public int noCreditos(camposConBean camp) throws Exception {
         String query = "SELECT  nvl(COUNT(RFC_CLIENTE),'0') AS TOTAL_CREDITOS FROM venta_productos  where status_venta='CRE' AND RFC_CLIENTE='"+camp.getRFCAUX()+"' ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         int total = 0;
         total = queryInteger(query);
         return total;
     }
       public int noFactura(int nota) throws Exception {
         String query = "select count(no_venta) as total from facturas where no_venta='"+nota+"' ";
-        System.out.println("SI FACTURE DE MANERA CORRECTA ---> " + query);
+        //Constantes.enviaMensajeConsola("SI FACTURE DE MANERA CORRECTA ---> " + query);
         int total = 0;
         total = queryInteger(query);
         return total;
     }
     public List productosBuscarLike(camposConBean camp) throws Exception {
         String query = "SELECT NO_PARTE, PRODUCTO, CATEGORIA, DESCRIPCION, MARCA, TOTAL_BODEGAS FROM FINAL_PRODUCTOS WHERE NO_PARTE LIKE '%"+camp.getCONSULTA_PARTE()+"%' OR PRODUCTO LIKE '%"+camp.getCONSULTA_PARTE()+"%' OR CATEGORIA LIKE '%"+camp.getCONSULTA_PARTE()+"%' OR DESCRIPCION LIKE '%"+camp.getCONSULTA_PARTE()+"%' OR MARCA LIKE '%"+camp.getCONSULTA_PARTE()+"%' ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new productosBodegaLikeMapper());
         return list;
@@ -128,7 +128,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List cotizaHist(camposConBean camp) throws Exception {
         String query = "SELECT COT.NO_COTIZA,COT.NO_PARTE, PROD.PRODUCTO, COT.PRECIO_UNITARIO, COT.NO_PRODUCTOCOTIZA, COT.PRECIO_FINAL, COT.RESPONSABLE, COT.FECHA_COTIZA FROM (SELECT NO_COTIZA, NO_PARTE, PRECIO_UNITARIO, NO_PRODUCTOCOTIZA, PRECIO_FINAL, RESPONSABLE, FECHA_COTIZA FROM COTIZACION WHERE RFC_CLIENTE='" + camp.getAUX_RFC_CLIENTE() + "' AND NO_PARTE='" + camp.getCONSULTA_PARTE() + "' AND NO_COTIZA IS NOT NULL) COT JOIN (SELECT NO_PARTE, PRODUCTO FROM PRODUCTOS)PROD ON COT.NO_PARTE=PROD.NO_PARTE ORDER BY FECHA_COTIZA DESC";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new cotizacionHist());
         return list;
@@ -136,7 +136,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List productosBuscarVenta(camposConBean camp) throws Exception {
         String query = "SELECT NO_PARTE, ANAQUEL, NIVEL, NVL(CATIDAD,'0') AS CATIDAD, NAME_BODEGA FROM BODEGAS WHERE NO_PARTE='" + camp.getNO_PARTE_VENTA() + "' ";
-        // System.out.println("CONSULTA BODEGAS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ---> " + query);
+        // //Constantes.enviaMensajeConsola("CONSULTA BODEGAS%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% ---> " + query);
         List list = null;
         list = queryForList(query, new productosBodegaMapper());
         return list;
@@ -144,7 +144,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List carritoPedidos(camposConBean camp) throws Exception {
         String query = "SELECT * FROM PRODUCTOS_COMPRA WHERE AUXPEDIDO='" + camp.getMAX_AUXPEDIDO() + "' ORDER BY TO_NUMBER(ID_PRODUCT) ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new pedidosMapper());
         return list;
@@ -152,7 +152,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List productosBuscarHist(camposConBean camp) throws Exception {
         String query = "SELECT NO_PARTE, PRODUCTO, MARCA, PRECIO, PRECIO_PESO, MONEDA, GANANCIA, PROVEEDOR,  FECHA_ACTUALIZA AS FECHAINGRESO FROM HISTORIA_INGRESO_PRODUCTO WHERE NO_PARTE='" + camp.getCONSULTA_PARTE() + "' ORDER BY TO_DATE(FECHA_ACTUALIZA) DESC ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new prodHistMapper());
         return list;
@@ -160,7 +160,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List carroCotizacion(camposConBean camp) throws Exception {
         String query = "SELECT ID_COTIZAPRODUCTO, NO_COTIZA, NO_PARTE, PRECIO_UNITARIO, NO_PRODUCTOCOTIZA, PRECIO_FINAL, RFC_CLIENTE, STATUS_COTIZA, RESPONSABLE, FECHA_COTIZA, AUXCOTIZA, NO_VENTA, IVA_UNITARIO,PRECIO_PARTIDA,IVA_PARTIDA,PRECIO_UNITARIO_TOTAL,PRECIO_PARTIDA_TOTAL FROM COTIZACION WHERE AUXCOTIZA='" + camp.getAUXCOTIZA() + "' ORDER BY ID_COTIZAPRODUCTO";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new carroCotizaMapper());
         return list;
@@ -168,7 +168,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List consultaVenta(camposConBean camp) throws Exception {
         String query = "SELECT NO_VENTA, NO_COTIZA FROM VENTA_PRODUCTOS WHERE NO_COTIZA='" + camp.getAUXCOTIZA() + "'";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new conVentaMapper());
         return list;
@@ -176,7 +176,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List carroConCotizacion(camposConBean camp) throws Exception {
         String query = "SELECT ID_COTIZAPRODUCTO, NO_COTIZA, NO_PARTE,PRECIO_UNITARIO, NO_PRODUCTOCOTIZA, PRECIO_FINAL, RFC_CLIENTE, STATUS_COTIZA, RESPONSABLE, FECHA_COTIZA, AUXCOTIZA, NO_VENTA, IVA_UNITARIO,PRECIO_PARTIDA,IVA_PARTIDA,PRECIO_UNITARIO_TOTAL,PRECIO_PARTIDA_TOTAL FROM COTIZACION WHERE NO_COTIZA='" + camp.getAUXCOTIZA() + "' ORDER BY ID_COTIZAPRODUCTO";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new carroCotizaMapper());
         return list;
@@ -184,7 +184,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List ventaAlmacen(camposConBean camp) throws Exception {
         String query = "SELECT VEN.ID_VENTA_PRODUCTO,  VEN.NO_PARTE, VEN.PRODUCTO, VEN.DESCRIPCION, VEN.NO_PRODUCTOVENTA, VEN.ESTATUS_ENTREGA, LOC.ANAQUEL, LOC.NIVEL FROM (SELECT VENTA.NO_PARTE, PROD.PRODUCTO, PROD.DESCRIPCION, VENTA.NO_PRODUCTOVENTA, VENTA.ID_VENTA_PRODUCTO, VENTA.ESTATUS_ENTREGA FROM (SELECT NO_PARTE, PRODUCTO, DESCRIPCION FROM FINAL_PRODUCTOS)PROD JOIN (SELECT NO_VENTA, NO_PARTE, NO_PRODUCTOVENTA, ID_VENTA_PRODUCTO, ESTATUS_ENTREGA FROM VENTA_PRODUCTOS WHERE NO_VENTA='" + camp.getNO_VENTA() + "' AND (STATUS_VENTA='3' OR STATUS_VENTA='2' OR STATUS_VENTA='CRE' OR STATUS_VENTA='PAG') )VENTA ON PROD.NO_PARTE=VENTA.NO_PARTE)VEN JOIN (SELECT ANAQUEL, NIVEL, NO_PARTE FROM BODEGAS WHERE NAME_BODEGA='LOCAL')LOC ON VEN.NO_PARTE=LOC.NO_PARTE ORDER BY TO_NUMBER(ID_VENTA_PRODUCTO)";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new consultaVentaAlmacenMapper());
         return list;
@@ -192,14 +192,14 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List ventaConsulta(camposConBean camp) throws Exception {
         String query = "SELECT COT.ID_VENTA_PRODUCTO, COT.NO_PARTE, PROD.PRODUCTO, COT.PRECIO_UNITARIO, COT.NO_PRODUCTOVENTA, COT.PRECIO_FINAL, COT.STATUS_VENTA FROM (SELECT * FROM VENTA_PRODUCTOS)COT JOIN (SELECT * FROM PRODUCTOS) PROD ON COT.NO_PARTE=PROD.NO_PARTE WHERE NO_VENTA='" + camp.getNO_VENTA() + "' ORDER BY ID_VENTA_PRODUCTO";
-         System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+         //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new consultaVentaMapper());
         return list;
     }
     public List ventaConsultaCobra(camposConBean camp) throws Exception {
         String query = "SELECT     cot.id_venta_producto,    cot.no_parte,    prod.producto,  precio_unitario,     cot.no_productoventa,   precio_final,    cot.status_venta FROM (SELECT * FROM VENTA_PRODUCTOS)COT JOIN (SELECT * FROM PRODUCTOS) PROD ON COT.NO_PARTE=PROD.NO_PARTE WHERE NO_VENTA='" + camp.getNO_VENTA() + "' ORDER BY ID_VENTA_PRODUCTO";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new consultaVentaMapper());
         return list;
@@ -207,7 +207,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List ventaConsultaDia(camposConBean camp) throws Exception {
         String query = "SELECT COT.ID_VENTA_PRODUCTO, COT.NO_PARTE, PROD.PRODUCTO, COT.PRECIO_UNITARIO, COT.NO_PRODUCTOVENTA, COT.PRECIO_FINAL, COT.STATUS_VENTA FROM (SELECT * FROM VENTA_PRODUCTOS WHERE NO_VENTA='" + camp.getNO_VENTA() + "')COT JOIN (SELECT * FROM PRODUCTOS) PROD ON COT.NO_PARTE=PROD.NO_PARTE WHERE FECHA_VENTA='" + camp.getFECHA_CONSULTA() + "' AND STATUS_VENTA='2' ORDER BY ID_VENTA_PRODUCTO ";
-        // System.out.println("consulta con fecha " + query);
+        // //Constantes.enviaMensajeConsola("consulta con fecha " + query);
         List list = null;
         list = queryForList(query, new consultaVentaMapper());
         return list;
@@ -215,7 +215,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List ventaConsultaDiaFecha(camposConBean camp) throws Exception {
         String query = "SELECT COT.ID_VENTA_PRODUCTO, COT.NO_PARTE, PROD.PRODUCTO, COT.PRECIO_UNITARIO, COT.NO_PRODUCTOVENTA, COT.PRECIO_FINAL, COT.STATUS_VENTA FROM (SELECT * FROM VENTA_PRODUCTOS WHERE NO_VENTA='" + camp.getNO_VENTA() + "' AND TO_DATE(FECHA_VENTA)>='" + camp.getFECHA_INICIO() + "' AND TO_DATE(FECHA_VENTA)<='" + camp.getFECHA_FINAL() + "')COT JOIN (SELECT * FROM PRODUCTOS) PROD ON COT.NO_PARTE=PROD.NO_PARTE WHERE  STATUS_VENTA='2' ORDER BY ID_VENTA_PRODUCTO ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new consultaVentaMapper());
         return list;
@@ -223,7 +223,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List ventaDia(camposConBean camp) throws Exception {
         String query = "SELECT DISTINCT (COT.NO_VENTA),  SUM(COT.NO_PRODUCTOVENTA) AS NO_PRODUCTOVENTA, SUM(COT.PRECIO_FINAL) AS PRECIO_FINAL FROM (SELECT * FROM VENTA_PRODUCTOS)COT JOIN (SELECT * FROM PRODUCTOS) PROD ON COT.NO_PARTE=PROD.NO_PARTE WHERE FECHA_VENTA='" + camp.getFECHA_CONSULTA() + "' AND STATUS_VENTA='2'  GROUP BY NO_VENTA ORDER BY TO_NUMBER(NO_VENTA) ";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new ventaDiaMapper());
         return list;
@@ -231,7 +231,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List ventaConsultaFechas(camposConBean camp) throws Exception {
         String query = "SELECT COT.ID_VENTA_PRODUCTO, COT.NO_PARTE, PROD.PRODUCTO, COT.PRECIO_UNITARIO, COT.NO_PRODUCTOVENTA, COT.PRECIO_FINAL, COT.STATUS_VENTA FROM (SELECT * FROM VENTA_PRODUCTOS)COT JOIN (SELECT * FROM PRODUCTOS) PROD ON COT.NO_PARTE=PROD.NO_PARTE WHERE TO_DATE(FECHA_VENTA)>='" + camp.getFECHA_INICIO() + "' AND TO_DATE(FECHA_VENTA)<='" + camp.getFECHA_FINAL() + "' AND STATUS_VENTA='2' ORDER BY ID_VENTA_PRODUCTO ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new consultaVentaMapper());
         return list;
@@ -239,7 +239,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List ventaConsultaFechasDetalle(camposConBean camp) throws Exception {
         String query = "SELECT DISTINCT (COT.NO_VENTA),  SUM(COT.NO_PRODUCTOVENTA) AS NO_PRODUCTOVENTA, SUM(COT.PRECIO_FINAL) AS PRECIO_FINAL FROM (SELECT * FROM VENTA_PRODUCTOS  )COT JOIN (SELECT * FROM PRODUCTOS) PROD ON COT.NO_PARTE=PROD.NO_PARTE WHERE TO_DATE(FECHA_VENTA)>='" + camp.getFECHA_INICIO() + "' AND TO_DATE(FECHA_VENTA)<='" + camp.getFECHA_FINAL() + "' AND STATUS_VENTA in ('2', '3')  GROUP BY NO_VENTA ORDER BY TO_NUMBER(NO_VENTA) ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new ventaDiaMapper());
         return list;
@@ -247,7 +247,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List listaStok0(camposConBean camp) throws Exception {
         String query = "SELECT VENTA.NO_PARTE, PRODUCTOS.PRODUCTO, VENTA.NO_PRODUCTOVENTA, VENTA.FECHA_VENTA, PRODUCTOS.TOTAL_BODEGAS  FROM(SELECT * FROM VENTA_PRODUCTOS WHERE STATUS_VENTA='2' AND FECHA_VENTA='" + camp.getFECHA_CONSULTA() + "')VENTA JOIN(SELECT NO_PARTE, PRODUCTO, TOTAL_BODEGAS FROM FINAL_PRODUCTOS)PRODUCTOS ON VENTA.NO_PARTE=PRODUCTOS.NO_PARTE  ";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new stokVentaMapper());
         return list;
@@ -255,7 +255,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List listaStok0Fechas(camposConBean camp) throws Exception {
         String query = "SELECT VENTA.NO_PARTE, PRODUCTOS.PRODUCTO, VENTA.NO_PRODUCTOVENTA, VENTA.FECHA_VENTA, PRODUCTOS.TOTAL_BODEGAS  FROM(SELECT * FROM VENTA_PRODUCTOS WHERE STATUS_VENTA='2' AND TO_DATE(FECHA_VENTA)>='" + camp.getFECHA_INICIO() + "' AND TO_DATE(FECHA_VENTA)<='" + camp.getFECHA_FINAL() + "')VENTA JOIN(SELECT NO_PARTE, PRODUCTO, TOTAL_BODEGAS FROM FINAL_PRODUCTOS)PRODUCTOS ON VENTA.NO_PARTE=PRODUCTOS.NO_PARTE  ";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new stokVentaMapper());
         return list;
@@ -263,7 +263,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List traerProducto(camposConBean camp) throws Exception {
         String query = "SELECT PED.NO_VENTA, PED.PRODUCTO, PED.MARCA, PED.NO_PARTE, PED.NO_PRODUCTOVENTA, PED.VENDEDOR, PED.FECHA_VENTA, PED.NAME_BODEGA, BOD.UBICACION FROM (SELECT TRAER.NO_VENTA, CAT.PRODUCTO, CAT.MARCA, TRAER.NO_PARTE, TRAER.NO_PRODUCTOVENTA, TRAER.VENDEDOR, TRAER.FECHA_VENTA, TRAER.NAME_BODEGA FROM (SELECT NO_VENTA, NO_PARTE, NO_PRODUCTOVENTA, VENDEDOR, FECHA_VENTA, NAME_BODEGA FROM TRAER_PRODUCTO_BODEGAS WHERE TO_NUMBER( NO_PRODUCTOVENTA)>0 AND NO_VENTA='" + camp.getNO_VENTA() + "')TRAER JOIN (SELECT NO_PARTE, PRODUCTO, MARCA FROM FINAL_PRODUCTOS)CAT ON TRAER.NO_PARTE=CAT.NO_PARTE)PED JOIN (SELECT NO_PARTE,CONCAT(ANAQUEL,NIVEL) AS UBICACION, NAME_BODEGA FROM BODEGAS)BOD ON PED.NO_PARTE=BOD.NO_PARTE AND PED.NAME_BODEGA=BOD.NAME_BODEGA";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new traerProductoMapper());
         return list;
@@ -279,7 +279,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
                 + "VENDEDOR,\n"
                 + "NVL(CANTIDAD_TRAER,'0') AS CANTIDAD_TRAER \n"
                 + "FROM venta_historia_producto where no_parte='"+camp.getCONSULTA_PARTE()+"'order by n_id desc";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new historiaProductoMapper());
         return list;
@@ -287,7 +287,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List productosBuscarFinal(camposConBean camp) throws Exception {
         String query = "SELECT NO_PARTE, PRODUCTO, CATEGORIA, DESCRIPCION, PRECIO, GANANCIA, PRECIO_PESO, MARCA, UNIDADMEDIDA, MONEDA, ALTERNATIVO, RESPONSABLE, PRECIO_CAL, TOTAL_BODEGAS, PROVEEDOR, CATEGORIA_GENERAL, FECHA_ACTUALIZA, CVE_SAT FROM FINAL_PRODUCTOS WHERE NO_PARTE='" + camp.getCONSULTA_PARTE() + "' ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new productosGralMapper());
         return list;
@@ -295,7 +295,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List ganancia(camposConBean camp) throws Exception {
         String query = "SELECT ID_GANANCIA, GANANCIA FROM GANANCIA  ";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new gananciaMapper());
         return list;
@@ -303,7 +303,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List categoria(camposConBean camp) throws Exception {
         String query = "SELECT DISTINCT(CATEGORIA_GENERAL) AS CATEGORIA_GENERAL FROM CATEGORIAS ";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new categoriaGralMapper());
         return list;
@@ -311,7 +311,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List anaquel(camposConBean camp) throws Exception {
         String query = "SELECT ANAQUEL FROM ANAQUEL ORDER BY N_ID ASC ";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new anaquelMapper());
         return list;
@@ -364,7 +364,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
                 + "            ven.rfc_cliente\n"
                 + "    ) tot\n"
                 + "    JOIN client cli ON cli.rfc_client = tot.rfc_cliente";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new creditosMapper());
         return list;
@@ -413,7 +413,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
                  + "    ven.rfc_cliente = '"+camp.getBUSCARCLIENTE()+"'\n"
                  + "ORDER BY\n"
                  + "    ( ven.total_venta - to_number(nvl(apor.total_apotaciones, '0')) ) DESC";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new creditosNotaMapper());
         return list;
@@ -463,14 +463,14 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
                  + "    ven.rfc_cliente = '"+camp.getBUSCARCLIENTE()+"' and ven.no_venta='"+camp.getNO_VENTA()+"'\n"
                  + "ORDER BY\n"
                  + "    ( ven.total_venta - to_number(nvl(apor.total_apotaciones, '0')) ) DESC";
-       //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+       //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new creditosNotaMapper());
         return list;
     }
      public List creditosNotaAbonos(camposConBean camp) throws Exception {
          String query = "SELECT N_ID, APORTACION, FECHA_APORTACION FROM PAGO_CREDITOS WHERE NO_VENTA='"+camp.getNO_VENTA()+"' ORDER BY FECHA_APORTACION DESC";
-        // System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        // //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new abonosMapper());
         return list;
@@ -523,7 +523,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
                 + "            ven.rfc_cliente\n"
                 + "    ) tot\n"
                 + "    JOIN client cli ON cli.rfc_client = tot.rfc_cliente  where cli.rfc_client like '%"+camp.getBUSCARCLIENTE()+"%' or cli.rason_client like '%"+camp.getBUSCARCLIENTE()+"%' ";
-         //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+         //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new creditosMapper());
         return list;
@@ -531,7 +531,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List inventarioLista(camposConBean camp) throws Exception {
         String query = "SELECT BODEGAS.NO_PARTE, PRODUCTOS.PRODUCTO, BODEGAS.ANAQUEL, BODEGAS.NIVEL, BODEGAS.CATIDAD, BODEGAS.NAME_BODEGA FROM (SELECT NO_PARTE, ANAQUEL, NIVEL, CATIDAD, NAME_BODEGA FROM BODEGAS WHERE ANAQUEL='" + camp.getANAQUEL() + "' AND NIVEL='" + camp.getNIVEL() + "' AND NAME_BODEGA='" + camp.getBODEGA() + "')BODEGAS JOIN (SELECT NO_PARTE, PRODUCTO FROM FINAL_PRODUCTOS )PRODUCTOS  ON BODEGAS.NO_PARTE=PRODUCTOS.NO_PARTE ORDER BY TO_NUMBER(CATIDAD) DESC ";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new inventarioMapper());
         return list;
@@ -539,7 +539,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List consultaBodega(camposConBean camp) throws Exception {
         String query = "SELECT NO_PARTE, ANAQUEL, NIVEL, CATIDAD,  NAME_BODEGA FROM BODEGAS WHERE NAME_BODEGA='" + camp.getBODEGA() + "' AND NO_PARTE='" + camp.getPARTEAUX() + "'";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new productosBodegaMapper());
         return list;
@@ -547,7 +547,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List nivel(camposConBean camp) throws Exception {
         String query = "SELECT DISTINCT(NIVEL) FROM BODEGAS ORDER BY NIVEL ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new nivelMapper());
         return list;
@@ -555,7 +555,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List pedidosPendientes(camposConBean camp) throws Exception {
         String query = "SELECT DISTINCT(ID_PEDIDO), COUNT(ID_PEDIDO) AS TOTAL_PARTES, SUM(CANTIDAD) AS TOTAL_PRODUCTOS  FROM PRODUCTOS_COMPRA WHERE ESTATUS_PEDIDO='PEDIDO' OR CANTIDAD<>CANTIDAD_LLEGADA GROUP BY ID_PEDIDO ORDER BY ID_PEDIDO ASC ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new productosPendientesMapper());
         return list;
@@ -563,7 +563,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List pedidosBuscar(camposConBean camp) throws Exception {
         String query = "SELECT ID_PRODUCT, ID_PEDIDO, AUXPEDIDO, NO_PARTE, CANTIDAD, FECHA_PEDIDO, FECHA_LLEGADA, PROVEEDOR,ESTATUS_PEDIDO, CANTIDAD_LLEGADA, '' AS AGREGAR FROM PRODUCTOS_COMPRA WHERE ID_PEDIDO='" + camp.getCONSULTA_PEDIDO() + "' ORDER BY TO_NUMBER(ID_PRODUCT) ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new pedidosMapper());
         return list;
@@ -571,7 +571,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List valorLlegada(camposConBean camp) throws Exception {
         String query = "SELECT  ID_PEDIDO,  NO_PARTE,  CANTIDAD_LLEGADA FROM PRODUCTOS_COMPRA WHERE ID_PEDIDO='" + camp.getCONSULTA_PEDIDO() + "' AND NO_PARTE='" + camp.getPARTEAUX() + "' AND CANTIDAD_LLEGADA>0 ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new valorLlegadaMapper());
         return list;
@@ -579,7 +579,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List pedidosBuscarAct(camposConBean camp) throws Exception {
         String query = "SELECT PRODUCT.ID_PRODUCT, PRODUCT.ID_PEDIDO, PRODUCT.AUXPEDIDO, PRODUCT.NO_PARTE, PRODUCT.CANTIDAD, PRODUCT.FECHA_PEDIDO, PRODUCT.FECHA_LLEGADA, PRODUCT.PROVEEDOR, PRODUCT.ESTATUS_PEDIDO, PRODUCT.CANTIDAD_LLEGADA, BODEGAS.ANAQUEL, BODEGAS.NIVEL FROM (SELECT ID_PRODUCT, ID_PEDIDO, AUXPEDIDO, NO_PARTE, CANTIDAD, FECHA_PEDIDO, FECHA_LLEGADA, PROVEEDOR,ESTATUS_PEDIDO, CANTIDAD_LLEGADA FROM PRODUCTOS_COMPRA WHERE ID_PRODUCT='" + camp.getID_PRODUCT() + "')PRODUCT JOIN (SELECT  NO_PARTE, ANAQUEL, NIVEL FROM BODEGAS WHERE  NAME_BODEGA='LOCAL' )BODEGAS ON PRODUCT.NO_PARTE=BODEGAS.NO_PARTE";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new pedidos2Mapper());
         return list;
@@ -587,7 +587,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List pedidosFaltantes(camposConBean camp) throws Exception {
         String query = "SELECT  ID_PRODUCT, ID_PEDIDO, AUXPEDIDO, NO_PARTE, CANTIDAD, FECHA_PEDIDO, FECHA_LLEGADA, PROVEEDOR,ESTATUS_PEDIDO, CANTIDAD_LLEGADA,'' AS AGREGAR FROM PRODUCTOS_COMPRA WHERE CANTIDAD<>CANTIDAD_LLEGADA AND ESTATUS_PEDIDO='ALMACEN'";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new pedidosMapper());
         return list;
@@ -595,7 +595,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List categoriaP(camposConBean camp) throws Exception {
         String query = "SELECT DISTINCT(CATEGORIA)  FROM CATEGORIAS WHERE CATEGORIA_GENERAL='" + camp.getCATEGORIA_GENERAL() + "' ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new categoriaMapper());
         return list;
@@ -603,7 +603,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List selectProvee(camposConBean camp) throws Exception {
         String query = "SELECT DISTINCT(RFC_PROVEE), RASON_PROVEE FROM PROVEE ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new selectProveeMapper());
         return list;
@@ -611,7 +611,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List contadoresPedidos(camposConBean camp) throws Exception {
         String query = "SELECT * FROM (SELECT NVL(MAX(ID_PRODUCT),'0') AS MAX_PRODUCT FROM PRODUCTOS_COMPRA),(SELECT NVL(MAX(ID_PEDIDO),'0') AS MAX_PEDIDO FROM PRODUCTOS_COMPRA),(SELECT NVL(MAX(AUXPEDIDO),'0') AS MAX_AUXPEDIDO FROM PRODUCTOS_COMPRA)  ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new contadoresPedidosMapper());
         return list;
@@ -619,7 +619,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public float iva() throws Exception {
         String query = "SELECT IVA FROM IVA ";
-        //System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         float valor = 0;
         valor = queryFloat(query);
         return valor;
@@ -627,7 +627,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public String auxCotiza() throws Exception {
         String query = "SELECT NVL(MAX(DISTINCT(TO_NUMBER(AUXCOTIZA))),'0') AS AUXCOTIZA FROM COTIZACION";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         String valor = null;
         valor = queryStringUnCampo(query);
         return valor;
@@ -635,7 +635,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public String noCotiza() throws Exception {
         String query = "SELECT NVL(MAX(DISTINCT(TO_NUMBER(NO_COTIZA))),'0') AS NO_COTIZA FROM COTIZACION";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         String valor = null;
         valor = queryStringUnCampo(query);
         return valor;
@@ -643,7 +643,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public String noVenta() throws Exception {
         String query = "SELECT NVL(MAX(DISTINCT(TO_NUMBER(NO_VENTA))),'0') AS NO_COTIZA FROM VENTA_PRODUCTOS";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         String valor = null;
         valor = queryStringUnCampo(query);
         return valor;
@@ -651,7 +651,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public float dolar() throws Exception {
         String query = "SELECT DOLAR FROM DOLAR ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         float dolar = 0;
         dolar = queryFloat(query);
         return dolar;
@@ -706,7 +706,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 "        FROM\n" +
 "            final_productos\n" +
 "    )  prod ON alterna.alternativo = prod.no_parte";
-                System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+                //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new productoAltMapper());
         return list;
@@ -714,7 +714,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List historiaBodegas(camposConBean camp) throws Exception {
         String query = "SELECT    NO_PARTE,    CANTIDAD,    BODEGA,    ANAQUEL,    NIVEL,    FECHA_INGRESO FROM   historia_ingreso_bodegas  WHERE NO_PARTE='" + camp.getCONSULTA_PARTE() + "' ORDER BY TO_DATE(FECHA_INGRESO) DESC";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new historiaBodegasMapper());
         return list;
@@ -722,7 +722,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List productosAlternativos(camposConBean camp) throws Exception {
         String query = "SELECT ALT.ID_ALTERNATIVO AS ID_ALTERNATIVOS, ALT.NO_PARTE, ALT.ALTERNATIVO, NVL(PROD.PRODUCTO,'NO')AS PRODUCTO, NVL(PROD.DESCRIPCION,'NO') AS DESCRIPCION, NVL(PROD.MARCA,'MARCA') AS MARCA FROM (SELECT * FROM ALTERNATIVOS WHERE NO_PARTE='" + camp.getCONSULTA_PARTE() + "')ALT LEFT OUTER JOIN (SELECT NO_PARTE, PRODUCTO, DESCRIPCION, MARCA FROM PRODUCTOS)PROD ON ALT.ALTERNATIVO=PROD.NO_PARTE";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new alternativosMapper());
         return list;
@@ -730,7 +730,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List proveedoresCon() throws Exception {
         String query = "SELECT RASON_PROVEE, RFC_PROVEE, NOMBRE_PROVEE, DIRECCION_PROVEE, TELEFONO_PROVEE, CORREO_PROVEE, EMPRESA_PROVEE, RESP_REGISTRO FROM PROVEE ORDER BY NOMBRE_PROVEE ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new proveedoresMapper());
         return list;
@@ -738,7 +738,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List usuariosCon() throws Exception {
         String query = "SELECT NAMEUSUARIO, PASSWORD, PERFIL, NAMEPERFIL, USUARIO, NVL(FILTRO,'NO') AS FILTRO FROM USUARIOS ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new usuarioMapper());
         return list;
@@ -746,7 +746,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List clientesBusqueda(camposConBean camp) throws Exception {
         String query = "SELECT RASON_CLIENT, RFC_CLIENT, NOMBRE_CLIENT, DIRECCION_CLIENT, TELEFONO_CLIET, CORREO_CLIENT, EMPRESA, RESP_REGISTRO, VALIDADO FROM CLIENT WHERE RASON_CLIENT LIKE '%" + camp.getBUSCARCLIENTE() + "%' OR RFC_CLIENT LIKE '%" + camp.getBUSCARCLIENTE() + "%'  ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new clientesMapper());
         return list;
@@ -754,7 +754,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List proveedoresBusqueda(camposConBean camp) throws Exception {
         String query = "SELECT RASON_PROVEE, RFC_PROVEE, NOMBRE_PROVEE, DIRECCION_PROVEE, TELEFONO_PROVEE, CORREO_PROVEE, EMPRESA_PROVEE, RESP_REGISTRO  FROM PROVEE WHERE NOMBRE_PROVEE LIKE '%" + camp.getBUSCARPROVEEDOR() + "%' OR RFC_PROVEE LIKE '%" + camp.getBUSCARPROVEEDOR() + "%' OR EMPRESA_PROVEE LIKE '%" + camp.getBUSCARPROVEEDOR() + "%' ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new proveedoresMapper());
         return list;
@@ -762,7 +762,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List clientesBusquedaRfc(camposConBean camp) throws Exception {
         String query = "SELECT RASON_CLIENT, RFC_CLIENT, NOMBRE_CLIENT, DIRECCION_CLIENT, TELEFONO_CLIET, CORREO_CLIENT, EMPRESA, RESP_REGISTRO, VALIDADO FROM CLIENT WHERE RFC_CLIENT='" + camp.getRFCAUX() + "' ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new clientesMapper());
         return list;
@@ -770,7 +770,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public List proveedoresBusquedaRfc(camposConBean camp) throws Exception {
         String query = "SELECT RASON_PROVEE, RFC_PROVEE, NOMBRE_PROVEE, DIRECCION_PROVEE, TELEFONO_PROVEE, CORREO_PROVEE, EMPRESA_PROVEE, RESP_REGISTRO  FROM PROVEE WHERE RFC_PROVEE='" + camp.getRFCAUX() + "' ";
-        System.out.println("QueryConsultaSubModulosPerfil ---> " + query);
+        //Constantes.enviaMensajeConsola("QueryConsultaSubModulosPerfil ---> " + query);
         List list = null;
         list = queryForList(query, new proveedoresMapper());
         return list;
@@ -938,7 +938,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 //Crear un objeto de tipo ObjPrepareStatement
         ObjPrepareStatement temporal;
 //imprimiendo los valores del objeto tipo CCT...........
-        Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
+        //Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
         //Constantes.enviaMensajeConsola("Entre al DAO del INSERT DATOS...................................");
         //En el objeto temporal settear el campo de la tabla, el tipo de dato y el valor a insertar
         // Integer a=Integer.parseInt(correspondencia1.getCANTI1());
@@ -966,7 +966,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 //Crear un objeto de tipo ObjPrepareStatement
         ObjPrepareStatement temporal;
 //imprimiendo los valores del objeto tipo CCT...........
-        Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
+        //Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
         //Constantes.enviaMensajeConsola("Entre al DAO del INSERT DATOS...................................");
         //En el objeto temporal settear el campo de la tabla, el tipo de dato y el valor a insertar
         // Integer a=Integer.parseInt(correspondencia1.getCANTI1());
@@ -993,7 +993,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
         Connection conne;
         conne = createConnection();
-        Constantes.enviaMensajeConsola("conexion abierta.........");
+        //Constantes.enviaMensajeConsola("conexion abierta.........");
         return conne;
 
     }
@@ -1013,7 +1013,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 //Crear un objeto de tipo ObjPrepareStatement
         ObjPrepareStatement temporal;
 //imprimiendo los valores del objeto tipo CCT...........
-        Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
+        //Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
 
 //En el objeto temporal settear el campo de la tabla, el tipo de dato y el valor a insertar
         temporal = new ObjPrepareStatement("NO_PARTE", "STRING", camp.getNO_PARTE_VENTA());
@@ -1046,14 +1046,9 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
         arregloCampos.add(temporal);
           temporal = new ObjPrepareStatement("PRECIO_PARTIDA_TOTAL", "DOUBLE", camp.getPRECIO_PARTIDA_TOTAL());
         arregloCampos.add(temporal);
+         temporal = new ObjPrepareStatement("ENTREGA", "STRING", camp.getENTREGA());
+        arregloCampos.add(temporal);
        
-        
-
-        System.out.println("conn: " + conn);
-        System.out.println("stat: " + stat);
-
-//Se terminan de adicionar a nuesto ArrayLis los objetos
-//Ejecutar la funcion del OracleDAOFactory queryInsert, se deber pasar como parmetros la tabla en donde se insertara
         return oraDaoFac.queryInsertTransaccion(conn, stat,"VENTA_PRODUCTOS", arregloCampos);
     }
 
@@ -1063,7 +1058,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 //Crear un objeto de tipo ObjPrepareStatement
         ObjPrepareStatement temporal;
 //imprimiendo los valores del objeto tipo CCT...........
-        Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
+        //Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
 
 //En el objeto temporal settear el campo de la tabla, el tipo de dato y el valor a insertar
         temporal = new ObjPrepareStatement("CATIDAD", "STRING", camp.getNUEVOSTOK());
@@ -1072,8 +1067,8 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
         String Condicion;
         Condicion = "WHERE NO_PARTE=" + "'" + "" + camp.getNO_PARTE_VENTA() + "" + "'" + " AND  NAME_BODEGA=" + "'" + "" + camp.getBODEGA() + "" + "'" + "";
 
-        System.out.println("conn: " + conn);
-        System.out.println("stat: " + stat);
+        //Constantes.enviaMensajeConsola("conn: " + conn);
+        //Constantes.enviaMensajeConsola("stat: " + stat);
 
 //Se terminan de adicionar a nuesto ArrayLis los objetos
 //Ejecutar la funcion del OracleDAOFactory queryInsert, se deber pasar como parmetros la tabla en donde se insertara
@@ -1086,7 +1081,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 //Crear un objeto de tipo ObjPrepareStatement
         ObjPrepareStatement temporal;
 //imprimiendo los valores del objeto tipo CCT...........
-        Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
+        //Constantes.enviaMensajeConsola("Entre al DAO del INSERT...................................");
 
 //En el objeto temporal settear el campo de la tabla, el tipo de dato y el valor a insertar
         temporal = new ObjPrepareStatement("ENTREGA", "STRING", camp.getENTREGA());
@@ -1095,8 +1090,8 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
         String Condicion;
         Condicion = "WHERE NO_PARTE=" + "'" + "" + camp.getNO_PARTE_VENTA() + "" + "'" + " AND  NO_VENTA=" + "'" + "" + camp.getNO_VENTA() + "" + "'" + "";
 
-        System.out.println("conn: " + conn);
-        System.out.println("stat: " + stat);
+        //Constantes.enviaMensajeConsola("conn: " + conn);
+        //Constantes.enviaMensajeConsola("stat: " + stat);
 
 //Se terminan de adicionar a nuesto ArrayLis los objetos
 //Ejecutar la funcion del OracleDAOFactory queryInsert, se deber pasar como parmetros la tabla en donde se insertara
@@ -1243,7 +1238,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
     }
 
     public boolean actualizaCobra(camposConBean camp) throws Exception {
-        System.out.println("Estoy Actualizando el estado de la venta");
+        //Constantes.enviaMensajeConsola("Estoy Actualizando el estado de la venta");
         //Crear un ArrayList para agregar los campos a insertar
         ArrayList<ObjPrepareStatement> arregloCampos = new ArrayList<ObjPrepareStatement>();
         ObjPrepareStatement temporal;
@@ -1262,7 +1257,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
     }
 
     public boolean actualizaEstatusEntrega(camposConBean camp) throws Exception {
-        System.out.println("Estoy Actualizando el estado de la venta");
+        //Constantes.enviaMensajeConsola("Estoy Actualizando el estado de la venta");
         //Crear un ArrayList para agregar los campos a insertar
         ArrayList<ObjPrepareStatement> arregloCampos = new ArrayList<ObjPrepareStatement>();
         ObjPrepareStatement temporal;
@@ -1291,7 +1286,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
         arregloCampos.add(temporal);
 
         String Condicion;
-        Condicion = "WHERE NO_COTIZA=" + "'" + "" + camp.getAUXCOTIZA() + "" + "'" + "";
+        Condicion = "WHERE NO_COTIZA=" + "'" + "" + camp.getNO_COTIZA() + "" + "'" + "";
 
         //Se terminan de adicionar a nuesto ArrayLis lbjos oetos
         //Ejecutar la funcion del OracleDAOFactory queryInsert
@@ -1764,7 +1759,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public boolean pedidosProductosBorrar(camposConBean camp) throws Exception {
 
-        System.out.println("entre a borrar el producto" + camp.getID_PRODUCT());
+        //Constantes.enviaMensajeConsola("entre a borrar el producto" + camp.getID_PRODUCT());
         //Crear un ArrayList para agregar los campos a insertar
         ArrayList<ObjPrepareStatement> arregloCampos = new ArrayList<ObjPrepareStatement>();
         ObjPrepareStatement temporal;
@@ -1784,7 +1779,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public boolean eliminarProducto(camposConBean camp) throws Exception {
 
-        System.out.println("entre a borrar el producto" + camp.getID_PRODUCT());
+        //Constantes.enviaMensajeConsola("entre a borrar el producto" + camp.getID_PRODUCT());
         //Crear un ArrayList para agregar los campos a insertar
         ArrayList<ObjPrepareStatement> arregloCampos = new ArrayList<ObjPrepareStatement>();
         ObjPrepareStatement temporal;
@@ -1804,7 +1799,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public boolean eliminarProductoBodegas(camposConBean camp) throws Exception {
 
-        System.out.println("entre a borrar el producto" + camp.getID_PRODUCT());
+        //Constantes.enviaMensajeConsola("entre a borrar el producto" + camp.getID_PRODUCT());
         //Crear un ArrayList para agregar los campos a insertar
         ArrayList<ObjPrepareStatement> arregloCampos = new ArrayList<ObjPrepareStatement>();
         ObjPrepareStatement temporal;
@@ -1824,7 +1819,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public boolean eliminarProductoAlternativos(camposConBean camp) throws Exception {
 
-        System.out.println("entre a borrar el producto" + camp.getID_PRODUCT());
+        //Constantes.enviaMensajeConsola("entre a borrar el producto" + camp.getID_PRODUCT());
         //Crear un ArrayList para agregar los campos a insertar
         ArrayList<ObjPrepareStatement> arregloCampos = new ArrayList<ObjPrepareStatement>();
         ObjPrepareStatement temporal;
@@ -1844,7 +1839,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
 
     public boolean eliminarProductoHist(camposConBean camp) throws Exception {
 
-        System.out.println("entre a borrar el producto" + camp.getID_PRODUCT());
+        //Constantes.enviaMensajeConsola("entre a borrar el producto" + camp.getID_PRODUCT());
         //Crear un ArrayList para agregar los campos a insertar
         ArrayList<ObjPrepareStatement> arregloCampos = new ArrayList<ObjPrepareStatement>();
         ObjPrepareStatement temporal;
@@ -1864,7 +1859,7 @@ public class ConsultaDAOImpl extends OracleDAOFactory implements ConsultaUsuario
     }
      public boolean eliminarProductoHistIn(camposConBean camp) throws Exception {
 
-        System.out.println("entre a borrar el producto" + camp.getID_PRODUCT());
+        //Constantes.enviaMensajeConsola("entre a borrar el producto" + camp.getID_PRODUCT());
         //Crear un ArrayList para agregar los campos a insertar
         ArrayList<ObjPrepareStatement> arregloCampos = new ArrayList<ObjPrepareStatement>();
         ObjPrepareStatement temporal;

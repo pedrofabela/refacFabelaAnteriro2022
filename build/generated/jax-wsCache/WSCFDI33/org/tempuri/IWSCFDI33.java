@@ -86,7 +86,7 @@ public interface IWSCFDI33 {
         @WebParam(name = "rFCEmisor", targetNamespace = "http://tempuri.org/")
         String rFCEmisor,
         @WebParam(name = "listaCFDI", targetNamespace = "http://tempuri.org/")
-        ArrayOfstring listaCFDI,
+        ArrayOfDetalleCFDICancelacion listaCFDI,
         @WebParam(name = "clavePrivada_Base64", targetNamespace = "http://tempuri.org/")
         String clavePrivadaBase64,
         @WebParam(name = "passwordClavePrivada", targetNamespace = "http://tempuri.org/")

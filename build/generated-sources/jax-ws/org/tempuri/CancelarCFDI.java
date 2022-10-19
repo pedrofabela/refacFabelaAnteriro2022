@@ -7,7 +7,7 @@ import javax.xml.bind.annotation.XmlAccessorType;
 import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlRootElement;
 import javax.xml.bind.annotation.XmlType;
-import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
+import org.datacontract.schemas._2004._07.tes_tfd_v33.ArrayOfDetalleCFDICancelacion;
 
 
 /**
@@ -23,7 +23,7 @@ import com.microsoft.schemas._2003._10.serialization.arrays.ArrayOfstring;
  *         &lt;element name="usuario" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="password" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="rFCEmisor" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
- *         &lt;element name="listaCFDI" type="{http://schemas.microsoft.com/2003/10/Serialization/Arrays}ArrayOfstring" minOccurs="0"/>
+ *         &lt;element name="listaCFDI" type="{http://schemas.datacontract.org/2004/07/TES.TFD.V33.Negocios}ArrayOfDetalleCFDICancelacion" minOccurs="0"/>
  *         &lt;element name="clavePrivada_Base64" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *         &lt;element name="passwordClavePrivada" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
@@ -53,7 +53,7 @@ public class CancelarCFDI {
     @XmlElementRef(name = "rFCEmisor", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
     protected JAXBElement<String> rfcEmisor;
     @XmlElementRef(name = "listaCFDI", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
-    protected JAXBElement<ArrayOfstring> listaCFDI;
+    protected JAXBElement<ArrayOfDetalleCFDICancelacion> listaCFDI;
     @XmlElementRef(name = "clavePrivada_Base64", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
     protected JAXBElement<String> clavePrivadaBase64;
     @XmlElementRef(name = "passwordClavePrivada", namespace = "http://tempuri.org/", type = JAXBElement.class, required = false)
@@ -136,10 +136,10 @@ public class CancelarCFDI {
      * 
      * @return
      *     possible object is
-     *     {@link JAXBElement }{@code <}{@link ArrayOfstring }{@code >}
+     *     {@link JAXBElement }{@code <}{@link ArrayOfDetalleCFDICancelacion }{@code >}
      *     
      */
-    public JAXBElement<ArrayOfstring> getListaCFDI() {
+    public JAXBElement<ArrayOfDetalleCFDICancelacion> getListaCFDI() {
         return listaCFDI;
     }
 
@@ -148,10 +148,10 @@ public class CancelarCFDI {
      * 
      * @param value
      *     allowed object is
-     *     {@link JAXBElement }{@code <}{@link ArrayOfstring }{@code >}
+     *     {@link JAXBElement }{@code <}{@link ArrayOfDetalleCFDICancelacion }{@code >}
      *     
      */
-    public void setListaCFDI(JAXBElement<ArrayOfstring> value) {
+    public void setListaCFDI(JAXBElement<ArrayOfDetalleCFDICancelacion> value) {
         this.listaCFDI = value;
     }
 

@@ -1,6 +1,9 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ taglib prefix="s" uri="/struts-tags"%>
+<SCRIPT LANGUAGE="JavaScript">
+history.forward();
+</SCRIPT>
 
 
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
@@ -26,6 +29,40 @@
         var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
         chart.draw(data, options);
       }
+      
+      
+        function muestra_oculta(accion, id) {// ejecuta el loader
+        alert("entre");
+                                                        if (document.getElementById) {
+                                                            
+                                                            alert("id"+ id);
+            //se obtiene el id
+                                                            var GM = document.getElementById(id); //se define la variable "el" igual a nuestro div
+                                                            GM.style.display = (GM.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+                                                        }
+                                                        alert("voy mandar el formulario");
+                                                        document.forma.action = accion;
+                                                        document.forma.submit();
+                                                    }
+
+
+                                                 
+                window.onload = function() {
+             var pos = window.name || 0;
+                 
+             window.scrollTo(0, pos);
+                 
+                  if (document.getElementById) {
+                     /* variables para ocultar load de ARCHIVO*/
+                    var GrdCar = document.getElementById('idfondo'); //se define la variable "el" igual a nuestro div
+                     GrdCar.style.display = (GrdCar.style.display == 'none') ? 'block' : 'none';/* "contenido_a_mostrar" es el nombre que le dimos al DIV */
+                                                        }
+                 
+                 
+                 
+                 
+                 
+            }               
     </script>
 
 <script type="text/javascript">
@@ -78,7 +115,7 @@
 
 <html xmlns="http://www.w3.org/1999/xhtml">
 
-
+ <link href="css/loader-1.css" rel="stylesheet" type="text/css" />
     <link href="css/menu.css" rel="stylesheet" type="text/css" />
     <link href="css/style.css" rel="stylesheet" type="text/css" />
       <script type="text/javascript">
@@ -117,8 +154,12 @@ else {
     
     <script type="text/javascript">
 
-        function guarda(accion) {
-            
+        function guarda(accion, id) {
+               if (document.getElementById) {
+                     /* variables para ocultar load de ARCHIVO*/
+                    var GrdCar = document.getElementById(id); //se define la variable "el" igual a nuestro div
+                     GrdCar.style.display = (GrdCar.style.display == 'none') ? 'block' : 'none';/* "contenido_a_mostrar" es el nombre que le dimos al DIV */
+                                                        }
             
           
             document.forma.action = accion;
@@ -172,14 +213,7 @@ else {
         }
 
         //PARA REGRESAR EN DONDE SE QUEDO...........
-        window.onload = function () {
-            var pos = window.name || 0;
-            window.scrollTo(0, pos);
-        }
-        window.onunload = function () {
-            window.name = self.pageYOffset
-                    || (document.documentElement.scrollTop + document.body.scrollTop);
-        }
+    
     </script>
 
 
@@ -218,7 +252,7 @@ else {
                                     <div class="div_titulos_sec"> <h2 class="text-tit-sec">Busqueda</h2></div>
                                 <s:textfield name="camp.CONSULTA_PARTE" id="CONSULTA_PARTE" placeholder="Número de Parte" required="true"  cssClass="campoFormBusqueda" onKeyUp="this.value=this.value.toUpperCase();"/>
                                
-                                <a href="Javascript:guarda('buscarProductosVenta')"><div class="boton">  Buscar  </div> </a>
+                                <a href="Javascript:guarda('buscarProductosVenta','idfondo')"><div class="boton">  Buscar  </div> </a>
                                 
                            
                                 <!--TABLA DE UBICACIONES -->
@@ -288,7 +322,7 @@ else {
                                  <div class="div_titulos_sec"> <h2 class="text-tit-sec">Busqueda</h2></div>
                             <s:textfield name="camp.BUSCARCLIENTE" id="camp.BUSCARCLIENTE" placeholder="RFC ó Nombre ó Empresa" required="true"  cssClass="campoFormBusqueda" onKeyUp="this.value=this.value.toUpperCase();"/>
                             
-                              <a href="Javascript:guarda('clientesBuscarVenta')"><div class="boton">  Buscar  </div> </a>
+                              <a href="Javascript:guarda('clientesBuscarVenta','idfondo')"><div class="boton">  Buscar  </div> </a>
                               
                               <img src="img/maquina-busqueda.jpg" alt="Maquina" style="width: 90%; margin-top: 20px; margin-bottom: 20px;" ></img>
                             </div>
@@ -410,6 +444,7 @@ else {
                                <s:if test="camp.NO_PARTE.length()>0 && camp.AUX_RFC_CLIENTE.length()>0">
                             <div class="div_sec1">
                                 <div style="width: 100%; text-align: center;"> <h3 >Datos del Producto</h3></div>
+                                   <s:fielderror fieldName="error" cssClass="error" />
 
 
                                <s:if test="actprod">
@@ -943,7 +978,7 @@ else {
 ,'497'
 ,'498'
 ,'499'
-,'500'}" headerValue="Cantidad" onchange="Javascript:guarda('buscarProductosVenta')" /></td>
+,'500'}" headerValue="Cantidad" onchange="Javascript:guarda('buscarProductosVenta','idfondo')" /></td>
                                                 <td style="background: #F0B823; color: black; text-align: center;"><s:textfield name="camp.INCREMENTO" id="INCREMENTO" cssClass="campoFormBusqueda" placeholder="Incremento" cssStyle="width: 30%;" onchange="Javascript:incremento('buscarProductosVenta')" ></s:textfield></td>
                                                 
                                                     <td id="centrar-dato" style="background: green; color: white;"><div style="width: 100%; line-height: 1;">Total Producto</div><s:property value="camp.TOTAL_PRODUCTO_VENTA" /></td>
@@ -1116,7 +1151,7 @@ else {
                                                     <s:if test="camp.NO_VENTA>=1">
                                                         <td id="centrar-dato">  <a href="<s:property value="#myUrl2" />" target="_blank"><img src="img/descarga.png" style="width: 50px; margin-top: 5px;"></img> </a></td>
                                                          </s:if>
-                                                        <td id="centrar-dato">   <a href="Javascript:guarda('clientesBuscarVenta')"></a></td>
+                                                        <td id="centrar-dato">   <a href="Javascript:guarda('clientesBuscarVenta','idfondo')"></a></td>
 
                                                       </tr>
                                                    
@@ -1283,7 +1318,7 @@ else {
                         
                         
 
-                        <div style="width: 100%;"> <a href="Javascript:guarda('generaCotizacion')"><div style="width: 120px; height: 30px; background: green; color: white; text-align: center; font-size: 16px; margin: auto; border-radius: 8px;">OK</div></a></div>
+                        <div style="width: 100%;"> <a href="Javascript:guarda('generaCotizacion','idfondo')"><div style="width: 120px; height: 30px; background: green; color: white; text-align: center; font-size: 16px; margin: auto; border-radius: 8px;">OK</div></a></div>
                             
                         
 
@@ -1302,7 +1337,7 @@ else {
                         
                         
 
-                        <div style="width: 100%;"> <a href="Javascript:guarda('generarVenta')" onclick="this.onclick=function(){return false}"><div style="width: 120px; height: 30px; background: green; color: white; text-align: center; font-size: 16px; margin: auto; border-radius: 8px;">OK</div></a></div>
+                        <div style="width: 100%;"> <a href="Javascript:guarda('generarVenta','idfondo')" onclick="this.onclick=function(){return false}"><div style="width: 120px; height: 30px; background: green; color: white; text-align: center; font-size: 16px; margin: auto; border-radius: 8px;">OK</div></a></div>
                             
                         
 
@@ -1317,6 +1352,15 @@ else {
                                 
                 </section> <!-- / #main-content -->
 
+                <div id='idfondo'>
+                <div class="loader1" style="background: #2B2C2B;">
+                    <div style="color:white; z-index: 1; font-size: 20px;  height: 50px; position: fixed; margin-top: 30px; margin-left: 43%; margin-top: 45%; ">Cargando . . .</div>
+                    <div class="loader-wrapper " id="loader-1" style="background: red;" >
+                        <div  id="loader" style="">
+                        </div>
+                    </div>
+                </div>
+            </div>
 
 
                 <footer id="main-footer">

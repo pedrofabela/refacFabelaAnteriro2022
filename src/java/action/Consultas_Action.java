@@ -968,10 +968,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             ListaClientes = consult.clientesCon();
 
-            System.out.println("El nombre de usuario es:" + usuariocons.getNAMEUSUARIO());
+            //Constantes.enviaMensajeConsola("El nombre de usuario es:" + usuariocons.getNAMEUSUARIO());
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+              System.out.println(e);
             return "ERROR";
         }
 
@@ -983,7 +983,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ConsultaBusiness consult = new ConsultaBusiness();
             banCliente = true;
 
-            System.out.println("El valor a buscar" + camp.getBUSCARCLIENTE());
+            //Constantes.enviaMensajeConsola("El valor a buscar" + camp.getBUSCARCLIENTE());
             if (camp.getBUSCARCLIENTE().length() > 0) {
 
                 camp.setBUSCARCLIENTE(camp.getBUSCARCLIENTE().toUpperCase());
@@ -993,6 +993,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             limpiar();
 
         } catch (Exception e) {
+            System.out.println(e);
         }
 
         return "SUCCESS";
@@ -1025,10 +1026,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 camp.setRFC_CLIENTE(camp.getRFC_CLIENTE().toUpperCase());
 
                 if (validaRfc(camp.getRFC_CLIENTE()) == 1) {
-                    System.out.println("el valor " + validaRfc(camp.getRFC_CLIENTE()));
+                    //Constantes.enviaMensajeConsola("el valor " + validaRfc(camp.getRFC_CLIENTE()));
                     rfc = true;
                 } else {
-                    System.out.println("el valor " + validaRfc(camp.getRFC_CLIENTE()));
+                    //Constantes.enviaMensajeConsola("el valor " + validaRfc(camp.getRFC_CLIENTE()));
                     rfc = false;
 
                     addFieldError("CampRequiererfc", "Formato de RFC novalido, favor de verificarlo");
@@ -1061,10 +1062,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             if (camp.getTELEFONO_CLIENTE().length() > 0) {
 
                 if (validaTelefono(camp.getTELEFONO_CLIENTE()) == 1) {
-                    // System.out.println("el valor "+validaRfc(camp.getRFC_CLIENTE()));
+                    // //Constantes.enviaMensajeConsola("el valor "+validaRfc(camp.getRFC_CLIENTE()));
                     tel = true;
                 } else {
-                    //  System.out.println("el valor "+validaRfc(camp.getRFC_CLIENTE()));
+                    //  //Constantes.enviaMensajeConsola("el valor "+validaRfc(camp.getRFC_CLIENTE()));
                     tel = false;
 
                     addFieldError("CampRequieretel", "Formato de número no valido, debe contener solo 10 dígitos ");
@@ -1086,12 +1087,12 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             if (camp.getCORREO_CLIENTE().length() > 0) {
                 camp.setCORREO_CLIENTE(camp.getCORREO_CLIENTE().toUpperCase());
                 if (validaCorreo(camp.getCORREO_CLIENTE()) == 1) {
-                    // System.out.println("el valor "+validaRfc(camp.getRFC_CLIENTE()));
+                    // //Constantes.enviaMensajeConsola("el valor "+validaRfc(camp.getRFC_CLIENTE()));
 
                     camp.setCORREO_CLIENTE(camp.getCORREO_CLIENTE().toLowerCase());
                     cor = true;
                 } else {
-                    //System.out.println("el valor "+validaRfc(camp.getRFC_CLIENTE()));
+                    //Constantes.enviaMensajeConsola("el valor "+validaRfc(camp.getRFC_CLIENTE()));
                     cor = false;
 
                     addFieldError("CampRequierecor", "Formato de correo no vaalido ");
@@ -1116,6 +1117,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -1150,10 +1152,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 camp.setRFC_CLIENTE(camp.getRFC_CLIENTE().toUpperCase());
 
                 if (validaRfc(camp.getRFC_CLIENTE()) == 1) {
-                    System.out.println("el valor " + validaRfc(camp.getRFC_CLIENTE()));
+                    //Constantes.enviaMensajeConsola("el valor " + validaRfc(camp.getRFC_CLIENTE()));
                     rfc = true;
                 } else {
-                    System.out.println("el valor " + validaRfc(camp.getRFC_CLIENTE()));
+                    //Constantes.enviaMensajeConsola("el valor " + validaRfc(camp.getRFC_CLIENTE()));
                     rfc = false;
 
                     addFieldError("CampRequiererfc", "Formato de RFC novalido, favor de verificarlo");
@@ -1186,10 +1188,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             if (camp.getTELEFONO_CLIENTE().length() > 0) {
 
                 if (validaTelefono(camp.getTELEFONO_CLIENTE()) == 1) {
-                    // System.out.println("el valor "+validaRfc(camp.getRFC_CLIENTE()));
+                    // //Constantes.enviaMensajeConsola("el valor "+validaRfc(camp.getRFC_CLIENTE()));
                     tel = true;
                 } else {
-                    //  System.out.println("el valor "+validaRfc(camp.getRFC_CLIENTE()));
+                    //  //Constantes.enviaMensajeConsola("el valor "+validaRfc(camp.getRFC_CLIENTE()));
                     tel = false;
 
                     addFieldError("CampRequieretel", "Formato de número no valido, debe contener solo 10 dígitos ");
@@ -1211,12 +1213,12 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             if (camp.getCORREO_CLIENTE().length() > 0) {
                 camp.setCORREO_CLIENTE(camp.getCORREO_CLIENTE().toUpperCase());
                 if (validaCorreo(camp.getCORREO_CLIENTE()) == 1) {
-                    // System.out.println("el valor "+validaRfc(camp.getRFC_CLIENTE()));
+                    // //Constantes.enviaMensajeConsola("el valor "+validaRfc(camp.getRFC_CLIENTE()));
 
                     camp.setCORREO_CLIENTE(camp.getCORREO_CLIENTE().toLowerCase());
                     cor = true;
                 } else {
-                    //System.out.println("el valor "+validaRfc(camp.getRFC_CLIENTE()));
+                    //Constantes.enviaMensajeConsola("el valor "+validaRfc(camp.getRFC_CLIENTE()));
                     cor = false;
 
                     addFieldError("CampRequierecor", "Formato de correo no vaalido ");
@@ -1241,6 +1243,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -1252,7 +1255,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             banClienteActualiza = true;
             ConsultaBusiness consult = new ConsultaBusiness();
 
-            System.out.println("LA RFC A CONSULTAR ES:" + camp.getRFCAUX());
+            //Constantes.enviaMensajeConsola("LA RFC A CONSULTAR ES:" + camp.getRFCAUX());
 
             ListaClientes = consult.clientesBusquedaRfc(camp);
 
@@ -1275,6 +1278,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             //   limpiar();
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -1296,6 +1300,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -1360,10 +1365,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             Listaproveedores = consult.proveedoresCon();
 
-            System.out.println("El nombre de usuario es:" + usuariocons.getNAMEUSUARIO());
+            //Constantes.enviaMensajeConsola("El nombre de usuario es:" + usuariocons.getNAMEUSUARIO());
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -1391,14 +1396,14 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ConsultaBusiness consult = new ConsultaBusiness();
             banCliente = true;
 
-            System.out.println("El valor a buscar" + camp.getBUSCARCLIENTE());
+            //Constantes.enviaMensajeConsola("El valor a buscar" + camp.getBUSCARCLIENTE());
             Listaproveedores = consult.proveedoresBusqueda(camp);
             limpiar();
 
-            System.out.println("El nombre de usuario es:" + usuariocons.getNAMEUSUARIO());
+            //Constantes.enviaMensajeConsola("El nombre de usuario es:" + usuariocons.getNAMEUSUARIO());
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+            System.out.println(e);
             return "ERROR";
         }
 
@@ -1423,7 +1428,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 return "SESION";
             }
 
-            System.out.println("entre a guardar provvedores");
+            //Constantes.enviaMensajeConsola("entre a guardar provvedores");
 
             ConsultaBusiness consult = new ConsultaBusiness();
             boolean nom = false;
@@ -1497,18 +1502,18 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             banCliente = true;
             if (nom && rfc && rs && dir && tel && emp && cor) {
-                System.out.println("se validaron los datos");
+                //Constantes.enviaMensajeConsola("se validaron los datos");
                 camp.setRESPONSABLE(usuariocons.getNAMEUSUARIO());
 
                 consult.GuardaProv(camp);
 
-                System.out.println("regrese de gurdar voy a consultar");
+                //Constantes.enviaMensajeConsola("regrese de gurdar voy a consultar");
                 proveedoresCon();
                 limpiar();
             }
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+          System.out.println(e);
             return "ERROR";
         }
 
@@ -1536,7 +1541,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             banClienteActualiza = true;
             ConsultaBusiness consult = new ConsultaBusiness();
 
-            System.out.println("LA RFC A CONSULTAR ES:" + camp.getRFCAUX());
+            //Constantes.enviaMensajeConsola("LA RFC A CONSULTAR ES:" + camp.getRFCAUX());
 
             Listaproveedores = consult.proveedoresBusquedaRfc(camp);
 
@@ -1559,6 +1564,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             //   limpiar();
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -1600,10 +1606,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             Listausuarios = consult.usuariosCon();
 
-            System.out.println("El nombre de usuario es:" + usuariocons.getNAMEUSUARIO());
+            //Constantes.enviaMensajeConsola("El nombre de usuario es:" + usuariocons.getNAMEUSUARIO());
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+             System.out.println(e);
             return "ERROR";
         }
 
@@ -1629,7 +1635,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+            System.out.println(e);
             return "ERROR";
         }
 
@@ -1674,23 +1680,23 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                     case "Administrador":
                         camp.setPERFIL("1");
-                        System.out.println("El Perfil de Adimistrador en " + camp.getPERFIL());
+                        //Constantes.enviaMensajeConsola("El Perfil de Adimistrador en " + camp.getPERFIL());
                         break;
                     case "Ventas":
                         camp.setPERFIL("2");
-                        System.out.println("El Perfil de Adimistrador en " + camp.getPERFIL());
+                        //Constantes.enviaMensajeConsola("El Perfil de Adimistrador en " + camp.getPERFIL());
                         break;
                     case "Almacen":
                         camp.setPERFIL("3");
-                        System.out.println("El Perfil de Adimistrador en " + camp.getPERFIL());
+                        //Constantes.enviaMensajeConsola("El Perfil de Adimistrador en " + camp.getPERFIL());
                         break;
                     case "Compras":
                         camp.setPERFIL("4");
-                        System.out.println("El Perfil de Adimistrador en " + camp.getPERFIL());
+                        //Constantes.enviaMensajeConsola("El Perfil de Adimistrador en " + camp.getPERFIL());
                         break;
                     case "Caja":
                         camp.setPERFIL("5");
-                        System.out.println("El Perfil de Adimistrador en " + camp.getPERFIL());
+                        //Constantes.enviaMensajeConsola("El Perfil de Adimistrador en " + camp.getPERFIL());
                         break;
                 }
 
@@ -1700,7 +1706,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 addFieldError("CampRequierenom", "Se requiere un valor ");
             }
 
-            System.out.println("EL VALOR INTRODUCIDO ES ....." + camp.getPERFIL());
+            //Constantes.enviaMensajeConsola("EL VALOR INTRODUCIDO ES ....." + camp.getPERFIL());
 
             banCliente = true;
             if (nom && rfc && rs) {
@@ -1713,6 +1719,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -1727,6 +1734,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             limpiar();
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -1803,9 +1811,9 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
 
                                    precioCal = (float) (((((precio) * (ivacalcula)) + (precio)) * ganancia) + (((precio) * (ivacalcula)) + (precio)));
-                                   System.out.println("sali del calculo y es:"+precioCal);
+                                   //Constantes.enviaMensajeConsola("sali del calculo y es:"+precioCal);
                                    pb.setPRECIO(String.valueOf(Math.round(precioCal)));
-                                   System.out.println("mande el valor"+pb.getPRECIO());
+                                   //Constantes.enviaMensajeConsola("mande el valor"+pb.getPRECIO());
                                }
                     
                     
@@ -1816,7 +1824,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
  /* +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -1917,7 +1925,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 precio = Float.parseFloat(pb.getPRECIO());
                 ganancia = Float.parseFloat(pb.getGANANCIA());
 
-                precioUniPartida = calculaPrecio(pb.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1);
+                precioUniPartida = calculaPrecio(pb.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1, ivacalcula, dolarcalcula);
 
             
                 pb.setPRECIO_PESO(String.valueOf(precioUniPartida.getPRECIO_UNITARIO_TOTAL()));
@@ -1951,7 +1959,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 precio = Float.parseFloat(pbAlt.getPRECIO());
                 ganancia = Float.parseFloat(pbAlt.getGANANCIA());
 
-                precioUniPartida = calculaPrecio(pbAlt.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1);
+                precioUniPartida = calculaPrecio(pbAlt.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1, ivacalcula, dolarcalcula);
 
              
 
@@ -1960,11 +1968,11 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
             ListaHistoriaBodegas = consult.historiaBodegas(camp);
-            System.out.println("la lsita tiene un valor de " + ListaHistoriaBodegas.size());
+            //Constantes.enviaMensajeConsola("la lsita tiene un valor de " + ListaHistoriaBodegas.size());
 
             /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+            System.out.println(e);
             return "ERROR";
         }
 
@@ -1972,10 +1980,9 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
     }
 
-    public precioBean calculaPrecio(String moneda, float ganancia, double precioUnitario, double aumento, int cantidad) throws Exception {
+    public precioBean calculaPrecio(String moneda, float ganancia, double precioUnitario, double aumento, int cantidad, float ivacalcula, float dolarcalcula) throws Exception {
 
-        ivacalcula = iva();
-        dolarcalcula = dolar();
+       
         double precioCal = 0;
         double precioPeso = 0;
         double precioPesofinalSinIva = 0;
@@ -2045,12 +2052,12 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
         precio.setIVA_PARTIDA(iva_partida);
         precio.setPRECIO_PARTIDA_TOTAL(precio_partida_total);
         
-//        System.out.println("PRECIO UNITARIO:"+ precio.getPRECIO_UNIARIO());
-//         System.out.println("IVA_UNITARIO" + precio.getIVA_UNITARIO());
-//          System.out.println("PRECIO UNITARIO TOTAL" + precio.getPRECIO_UNITARIO_TOTAL());
-//           System.out.println("PRECIO PARTIDA" + precio.getPRECIO_PARTIDA());
-//            System.out.println("IVA PARTIDA" + precio.getIVA_PARTIDA());
-//             System.out.println("PRECIO TOTAL PARTIDA" + precio.getPRECIO_PARTIDA_TOTAL());
+//        //Constantes.enviaMensajeConsola("PRECIO UNITARIO:"+ precio.getPRECIO_UNIARIO());
+//         //Constantes.enviaMensajeConsola("IVA_UNITARIO" + precio.getIVA_UNITARIO());
+//          //Constantes.enviaMensajeConsola("PRECIO UNITARIO TOTAL" + precio.getPRECIO_UNITARIO_TOTAL());
+//           //Constantes.enviaMensajeConsola("PRECIO PARTIDA" + precio.getPRECIO_PARTIDA());
+//            //Constantes.enviaMensajeConsola("IVA PARTIDA" + precio.getIVA_PARTIDA());
+//             //Constantes.enviaMensajeConsola("PRECIO TOTAL PARTIDA" + precio.getPRECIO_PARTIDA_TOTAL());
              
 
         return precio;
@@ -2074,12 +2081,12 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
             ConsultaBusiness consult = new ConsultaBusiness();
 
-            Constantes.enviaMensajeConsola("La constraseña es:" + camp.getAUTORIZACION());
+            //Constantes.enviaMensajeConsola("La constraseña es:" + camp.getAUTORIZACION());
 
             String aut = camp.getAUTORIZACION();
             String pass = consult.pass();
 
-            System.out.println(pass);
+            //Constantes.enviaMensajeConsola(pass);
 
             if (pass.equals(aut)) {
                 consult.eliminarProducto(camp);
@@ -2121,7 +2128,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -2206,7 +2213,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -2245,7 +2252,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -2273,7 +2280,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             camp.setCONSULTA_PARTE(camp.getNO_PARTE());
 
-            System.out.println("consulta parte" + camp.getCONSULTA_PARTE());
+            //Constantes.enviaMensajeConsola("consulta parte" + camp.getCONSULTA_PARTE());
 
             int traspasar = 0;
             int stock = 0;
@@ -2310,12 +2317,12 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             }
 
-            System.out.println("LOCAL" + local);
-            System.out.println("CASA" + casa);
-            System.out.println("TENANGO" + tenango);
+            //Constantes.enviaMensajeConsola("LOCAL" + local);
+            //Constantes.enviaMensajeConsola("CASA" + casa);
+            //Constantes.enviaMensajeConsola("TENANGO" + tenango);
 
             consult.actualizaMovimientoMenos(camp);
-            System.out.println("EL NOMBRE DE LA BODEGA ES :%%%%%%%" + camp.getNAME_BODEGA());
+            //Constantes.enviaMensajeConsola("EL NOMBRE DE LA BODEGA ES :%%%%%%%" + camp.getNAME_BODEGA());
 
             if (camp.getBODEGA_AUXILIAR().equals("LOCAL")) {
 
@@ -2327,7 +2334,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
             if (camp.getBODEGA_AUXILIAR().equals("CASA")) {
-                System.out.println("entre a insertar a la bodegax");
+                //Constantes.enviaMensajeConsola("entre a insertar a la bodegax");
                 nuevoStok = traspasar + casa;
                 camp.setNUEVOSTOK(String.valueOf(nuevoStok));
                 camp.setBODEGA("CASA");
@@ -2370,7 +2377,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             stock = 0;
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+            System.out.println(e);
             return "ERROR";
         }
 
@@ -2404,7 +2411,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -2457,6 +2464,8 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             float precio = 0;
             String moneda = "";
             float ganancia = 0;
+              ivacalcula = iva();
+        dolarcalcula = dolar();
 
             if (camp.getPRECIO().length() > 0 && camp.getGANANCIA().length() > 0) {
 
@@ -2466,7 +2475,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 ganancia = Float.parseFloat(camp.getGANANCIA());
                 moneda = camp.getMONEDA();
 
-                precioUniPartida = calculaPrecio(moneda, ganancia, precio, camp.getINCREMENTO(), 1);
+                precioUniPartida = calculaPrecio(moneda, ganancia, precio, camp.getINCREMENTO(), 1, ivacalcula, dolarcalcula);
 
              
 
@@ -2474,7 +2483,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             }
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+            System.out.println(e);
             return "ERROR";
         }
 
@@ -2516,7 +2525,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 ganancia = Float.parseFloat(camp.getGANANCIA());
                 moneda = camp.getMONEDA();
 
-                precioUniPartida = calculaPrecio(moneda, ganancia, precio, camp.getINCREMENTO(), 1);
+                precioUniPartida = calculaPrecio(moneda, ganancia, precio, camp.getINCREMENTO(), 1, ivacalcula, dolarcalcula);
  
 
                 camp.setSIMULADOR_PRECIO(String.valueOf(precioUniPartida.getPRECIO_UNITARIO_TOTAL()));
@@ -2525,7 +2534,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             }
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+            System.out.println(e);
             return "ERROR";
         }
 
@@ -2551,10 +2560,9 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
             ConsultaBusiness consult = new ConsultaBusiness();
 
-            java.util.Date fecha = new Date();
-            System.out.println(fecha);
+            java.util.Date fecha = new Date();         
             SimpleDateFormat dt1 = new SimpleDateFormat("dd-MM-YYYY");
-            System.out.println(dt1.format(fecha));
+            //Constantes.enviaMensajeConsola(dt1.format(fecha));
             camp.setRESPONSABLE(usuariocons.getNAMEUSUARIO());
             camp.setFECHA_ACTUALIZA(dt1.format(fecha));
 
@@ -2656,7 +2664,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             simuladorPrecio();
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -2683,9 +2691,9 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ConsultaBusiness consult = new ConsultaBusiness();
 
             java.util.Date fecha = new Date();
-            System.out.println(fecha);
+            
             SimpleDateFormat dt1 = new SimpleDateFormat("dd-MM-YYYY");
-            System.out.println(dt1.format(fecha));
+            //Constantes.enviaMensajeConsola(dt1.format(fecha));
             camp.setRESPONSABLE(usuariocons.getNAMEUSUARIO());
             camp.setFECHA_ACTUALIZA(dt1.format(fecha));
 
@@ -2779,7 +2787,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             if (error1 && error2 && error3 && error4 && error5 && error6 && error7 && error8 && error9 && error10 && error11 && error12) {
 
-                System.out.println("el precio calculado es " + camp.getSIMULADOR_PRECIO());
+                //Constantes.enviaMensajeConsola("el precio calculado es " + camp.getSIMULADOR_PRECIO());
                 consult.guardaProductos(camp);
                 consult.guardaProductosHist(camp);
 
@@ -2798,7 +2806,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             simuladorPrecio();
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -2842,7 +2850,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 precio = Float.parseFloat(pb.getPRECIO());
                 
                 ganancia = Float.parseFloat(pb.getGANANCIA());
-                precioUniPartida = calculaPrecio(pb.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1);
+                precioUniPartida = calculaPrecio(pb.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1, ivacalcula, dolarcalcula);
 
               
 
@@ -2854,7 +2862,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+             System.out.println(e);
             return "ERROR";
         }
 
@@ -2915,7 +2923,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 pbAlt = (productosBean) cgeAlt.next();
                 precio = Float.parseFloat(pbAlt.getPRECIO());
                 ganancia = Float.parseFloat(pbAlt.getGANANCIA());
-                precioUniPartida = calculaPrecio(pbAlt.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1);
+                precioUniPartida = calculaPrecio(pbAlt.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1, ivacalcula, dolarcalcula);
 
               
 
@@ -2929,7 +2937,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             buscarProductos();
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+             System.out.println(e);
             return "ERROR";
         }
 
@@ -2968,7 +2976,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             // ListaBuscarProducto = consult.productosBuscar(camp);
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+           System.out.println(e);
             return "ERROR";
         }
 
@@ -2980,7 +2988,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
         String fechaHoy;
 
         java.util.Date fecha = new Date();
-        System.out.println(fecha);
+      
         SimpleDateFormat dt1 = new SimpleDateFormat("dd-MM-YYYY");
         fechaHoy = dt1.format(fecha);
 
@@ -3013,7 +3021,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             camp.setFECHA_ACTUALIZA(fecha);
 
             ListaContadoresPedidos = consult.contadoresPedidos(camp);
-            //  System.out.println("PROVEEDOR+++++++++++++++++++++++"+camp.getPROVEEDOR());
+            //  //Constantes.enviaMensajeConsola("PROVEEDOR+++++++++++++++++++++++"+camp.getPROVEEDOR());
             if (camp.getNO_PRODUCTOS_PEDIDOS().length() >= 1) {
                 cantidad = true;
 
@@ -3043,7 +3051,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                 }
 
-                //      System.out.println("action.Consultas_Action.guardaPedidos()");
+                //      //Constantes.enviaMensajeConsola("action.Consultas_Action.guardaPedidos()");
                 camp.setMAX_PRODUCT(String.valueOf(idprod + 1));
 
                 if (camp.getMAX_AUXPEDIDO().length() > 0) {
@@ -3072,7 +3080,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+          System.out.println(e);
             return "ERROR";
         }
 
@@ -3083,7 +3091,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
     public String pedidosProductoBorrar() {
         try {
             ConsultaBusiness consult = new ConsultaBusiness();
-            System.out.println("action.Consultas_Action.pedidosProductoBorrar()" + camp.getID_PRODUCT());
+            //Constantes.enviaMensajeConsola("action.Consultas_Action.pedidosProductoBorrar()" + camp.getID_PRODUCT());
 
             consult.pedidosProductosBorrar(camp);
 
@@ -3091,6 +3099,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaBuscarProducto.clear();
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3103,7 +3112,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             banguarda = false;
 
             camp.setESTATUS_PEDIDO("PEDIDO");
-            System.out.println("el pedido es:" + camp.getID_PEDIDO());
+            //Constantes.enviaMensajeConsola("el pedido es:" + camp.getID_PEDIDO());
 
             consult.pedidoGuardar(camp);
             registroPedidos();
@@ -3112,6 +3121,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             foliopedido = true;
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3140,6 +3150,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaPedidosFaltantes = consult.pedidosFaltantes(camp);
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3186,6 +3197,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3215,6 +3227,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaPedidosPendientes = consult.pedidosPendientes(camp);
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3241,6 +3254,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaPedidosPendientes = consult.pedidosPendientes(camp);
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3291,6 +3305,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3336,9 +3351,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             ListaNivel = consult.nivel(camp);
 
-            System.out.println("LA UBICACIÓN DEL PRODUCTO ES +++++++++++++" + camp.getANAQUEL() + camp.getNIVEL());
+            //Constantes.enviaMensajeConsola("LA UBICACIÓN DEL PRODUCTO ES +++++++++++++" + camp.getANAQUEL() + camp.getNIVEL());
 
         } catch (Exception e) {
+             System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3422,12 +3438,12 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                     }
                 } else {
-                    System.out.println("Entre a insertar");
+                    //Constantes.enviaMensajeConsola("Entre a insertar");
 
                     consult.GuardaPBodega(camp);
                 }
 
-                System.out.println("SALI DE LA ACTUALIZACION DE LLEGADA DE PRODUCTOS");
+                //Constantes.enviaMensajeConsola("SALI DE LA ACTUALIZACION DE LLEGADA DE PRODUCTOS");
 
             } else {
                 consult.GuardaHistoriaBodega(camp);
@@ -3463,7 +3479,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                     }
                 } else {
-                    System.out.println("Entre a insertar");
+                    //Constantes.enviaMensajeConsola("Entre a insertar");
 
                     consult.GuardaPBodega(camp);
                 }
@@ -3473,6 +3489,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             comprasBuscar();
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3502,6 +3519,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaNivel = consult.nivel(camp);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3529,6 +3547,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaInventario = consult.inventarioLista(camp);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3552,12 +3571,15 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
             ConsultaBusiness consult = new ConsultaBusiness();
+            
+            inicializaVentaCot();
 
             ListaInventario = consult.inventarioLista(camp);
 
             camp.setACTIVA_VENTA("");
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3582,10 +3604,13 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ConsultaBusiness consult = new ConsultaBusiness();
 
             if (camp.getAUX_RFC_CLIENTE().length() > 0) {
+                
+                  ivacalcula = iva();
+                  dolarcalcula = dolar();
 
                 DecimalFormat formateador = new DecimalFormat("###,###.##");
                 ListaBuscarProducto = consult.productosBuscar(camp);
-                Constantes.enviaMensajeConsola("ListaBuscarProducto" + ListaBuscarProducto.size());
+                //Constantes.enviaMensajeConsola("ListaBuscarProducto" + ListaBuscarProducto.size());
 
                 Iterator LBP = ListaBuscarProducto.iterator();
                 productosBean objB;
@@ -3614,13 +3639,13 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                 }
                 
-                System.out.println("sALI DE LA CONSULTA");
+                //Constantes.enviaMensajeConsola("sALI DE LA CONSULTA");
 
                 camp.setTOTAL_PRODUCTO_BODEGAS(String.valueOf(local + casa + tenango));
                 
                   
                 ListaCotizaHist = consult.cotizaHist(camp);
-                Constantes.enviaMensajeConsola("ListaCotizaHist" + ListaCotizaHist.size());
+                //Constantes.enviaMensajeConsola("ListaCotizaHist" + ListaCotizaHist.size());
                 
                
 
@@ -3662,7 +3687,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     cantidad = 1;
                 }
 
-                // System.out.println("la cantidad de productos a vender es:");
+                // //Constantes.enviaMensajeConsola("la cantidad de productos a vender es:");
                 Iterator cgeBP = ListaBuscarProductoFinal.iterator();
                 productosBean pbBP;
 
@@ -3689,7 +3714,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     incremento=camp.getINCREMENTO();
                     
 
-                    precioUniPartida = calculaPrecio(pbBP.getMONEDA(), ganancia, precio, incremento, cantidad);
+                    precioUniPartida = calculaPrecio(pbBP.getMONEDA(), ganancia, precio, incremento, cantidad, ivacalcula, dolarcalcula );
                     // precioCal2 = precioUniPartida.getPRECIO_UNITARIO_TOTAL()* cantidad;
 
                    
@@ -3702,15 +3727,15 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     camp.setPRECIO_PARTIDA_TOTAL(precioUniPartida.getPRECIO_PARTIDA_TOTAL());
                     camp.setPRECIO_UNITARIO_TOTAL(precioUniPartida.getPRECIO_UNITARIO_TOTAL());
 
-                    System.out.println("+++++++++PRECIOS UNITARIOS++++++++++++++");
-                    System.out.println("PRECIO UNITARIO: " + camp.getPRECIO_UNITARIO());
-                    System.out.println("IVA UNITARIO: " + camp.getIVA_UNITARIO());
-                    System.out.println("PRECIO UNITARIO TOTAL" + camp.getPRECIO_UNITARIO_TOTAL());
+                    //Constantes.enviaMensajeConsola("+++++++++PRECIOS UNITARIOS++++++++++++++");
+                    //Constantes.enviaMensajeConsola("PRECIO UNITARIO: " + camp.getPRECIO_UNITARIO());
+                    //Constantes.enviaMensajeConsola("IVA UNITARIO: " + camp.getIVA_UNITARIO());
+                    //Constantes.enviaMensajeConsola("PRECIO UNITARIO TOTAL" + camp.getPRECIO_UNITARIO_TOTAL());
 
-                    System.out.println("+++++++++PRECIOS PARTIDAS++++++++++++++");
-                    System.out.println("PRECIO PARTIDA: " + camp.getPRECIO_PARTIDA());
-                    System.out.println("IVA PARTIDA: " + camp.getIVA_PARTIDA());
-                    System.out.println("PRECIO PARTIDA TOTAL " + camp.getPRECIO_PARTIDA_TOTAL());
+                    //Constantes.enviaMensajeConsola("+++++++++PRECIOS PARTIDAS++++++++++++++");
+                    //Constantes.enviaMensajeConsola("PRECIO PARTIDA: " + camp.getPRECIO_PARTIDA());
+                    //Constantes.enviaMensajeConsola("IVA PARTIDA: " + camp.getIVA_PARTIDA());
+                    //Constantes.enviaMensajeConsola("PRECIO PARTIDA TOTAL " + camp.getPRECIO_PARTIDA_TOTAL());
 
                     camp.setCATEGORIA(pbBP.getCATEGORIA());
                     camp.setMARCA(pbBP.getMARCA());
@@ -3734,7 +3759,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                 if (ListaProductoHist.size() > 0) {
 
-                    System.out.println("ENTRE A CONSULTAR LA HISTORIA DEL PRODUCTO");
+                    //Constantes.enviaMensajeConsola("ENTRE A CONSULTAR LA HISTORIA DEL PRODUCTO");
                     Iterator cge = ListaProductoHist.iterator();
 
                     productosBean pb;
@@ -3747,7 +3772,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                         precio = Float.parseFloat(pb.getPRECIO());
                         ganancia = Float.parseFloat(pb.getGANANCIA());
 
-                        precioUniPartida = calculaPrecio(pb.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), cantidad);
+                        precioUniPartida = calculaPrecio(pb.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), cantidad, ivacalcula, dolarcalcula);
                         pb.setPRECIO_PESO(String.valueOf(precioUniPartida.getPRECIO_UNITARIO_TOTAL()));
 
                     }
@@ -3776,7 +3801,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                             ganancia = Float.parseFloat(pbAlt.getGANANCIA());
                         }
 
-                        precioUniPartida = calculaPrecio(pbAlt.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), cantidad);
+                        precioUniPartida = calculaPrecio(pbAlt.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), cantidad, ivacalcula, dolarcalcula);
                         pbAlt.setPRECIO(String.valueOf(precioUniPartida.getPRECIO_UNITARIO_TOTAL()));
 
                     }
@@ -3790,7 +3815,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
             }
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+             System.out.println(e);
             return "ERROR";
         }
 
@@ -3821,6 +3846,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             buscarProductosVenta();
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3852,12 +3878,19 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaProductoAlt = consult.productosBuscarAlt(camp);
 
             int AUXCOTIZA = 0;
-
+            double total_compara=0.0; 
+            int cantidad=0;
+            double diferencia=0.0;
             if (camp.getAUXCOTIZA().length() > 0) {
-
-                System.out.println("ENTRE A GRADAR LAS VENTAS");
+                
+              cantidad=Integer.parseInt(camp.getCANTIDAD_VENTA());
+              total_compara=camp.getPRECIO_UNITARIO_TOTAL()*cantidad;
+              diferencia=camp.getPRECIO_PARTIDA_TOTAL()-total_compara;
+              
+                if(diferencia<=0.02){              
+               
+                //Constantes.enviaMensajeConsola("ENTRE A GRADAR LAS VENTAS");
                 consult.guardaProductoVenta(camp);
-
                 camp.setPRECIO_PESO("");
                 camp.setCANTIDAD_VENTA("");
                 camp.setTOTAL_PRODUCTO_VENTA("");
@@ -3875,13 +3908,24 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 camp.setIVA_PARTIDA(0);
                 camp.setPRECIO_UNITARIO_TOTAL(0);
                 camp.setPRECIO_PARTIDA_TOTAL(0);
+                 }
+                else{
+                    addFieldError("error", "No se pudo agregar el producto, favor de intentarlo de nuevo");
+                }
 
             } else {
 
                 AUXCOTIZA = Integer.parseInt(consult.auxCotiza());
                 AUXCOTIZA = AUXCOTIZA + 1;
                 camp.setAUXCOTIZA(String.valueOf(AUXCOTIZA));
-                System.out.println("ENTRE A GRADAR LAS VENTAS 2");
+                //Constantes.enviaMensajeConsola("ENTRE A GRADAR LAS VENTAS 2");
+                
+                 cantidad=Integer.parseInt(camp.getCANTIDAD_VENTA());
+              total_compara=camp.getPRECIO_UNITARIO_TOTAL()*cantidad;
+              diferencia=camp.getPRECIO_PARTIDA_TOTAL()-total_compara;
+                
+                  if(diferencia<=0.02){      
+                
                 consult.guardaProductoVenta(camp);
 
                 camp.setPRECIO_PESO("");
@@ -3901,6 +3945,11 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 camp.setIVA_PARTIDA(0);
                 camp.setPRECIO_UNITARIO_TOTAL(0);
                 camp.setPRECIO_PARTIDA_TOTAL(0);
+                  }
+                     else{
+                  addFieldError("error", "No se pudo agregar el producto, favor de intentarlo de nuevo");
+
+                }
 
             }
 
@@ -3932,6 +3981,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             ListaBuscarProducto.clear();
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3967,6 +4017,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaCarroCotizacion = consult.carroCotizacion(camp);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -3991,7 +4042,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             ConsultaBusiness consult = new ConsultaBusiness();
 
-            System.out.println("SE BORRARA EL ARTICULO" + camp.getBORRARPRODUCTO());
+            //Constantes.enviaMensajeConsola("SE BORRARA EL ARTICULO" + camp.getBORRARPRODUCTO());
             consult.borrarProducto(camp);
 
             ListaCarroCotizacion = consult.carroCotizacion(camp);
@@ -4014,6 +4065,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4050,17 +4102,17 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                 if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("LOCAL")) {
                     local = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                    System.out.println("Local:" + local);
+                    //Constantes.enviaMensajeConsola("Local:" + local);
                 }
 
                 if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("CASA")) {
                     casa = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                    System.out.println("Casa:" + casa);
+                    //Constantes.enviaMensajeConsola("Casa:" + casa);
                 }
 
                 if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("TENANGO")) {
                     tenango = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                    System.out.println("Tenango:" + tenango);
+                    //Constantes.enviaMensajeConsola("Tenango:" + tenango);
                 }
 
             }
@@ -4069,7 +4121,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             camp.setNUEVOSTOK(String.valueOf(nuv_stok));
 
-            System.out.println("nuevoStock" + camp.getNUEVOSTOK());
+            //Constantes.enviaMensajeConsola("nuevoStock" + camp.getNUEVOSTOK());
 
             consult.actualizaStockCancela(camp);
 
@@ -4078,6 +4130,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             consultaVentaCancela();
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4102,9 +4155,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 return "SESION";
             }
 
-            ConsultaBusiness consult = new ConsultaBusiness();
-
-            System.out.println("action.Consultas_Action.generarVenta()" + camp.getACTIVA_VENTA());
+            ConsultaBusiness consult = new ConsultaBusiness();           
 
             conecta = consult.crearConexion();
             //statement
@@ -4127,13 +4178,12 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             int casa = 0;
             int tenango = 0;
             int nuv_stok = 0;
-            int aux_stok = 0;
-            float total_individual = 0;
-            float total_cotiza = 0;
-            float total_general = 0;
-              int p = 0;
-             int vendidos = 0;
-             int totalStock=0;
+            int aux_stok = 0;         
+            int p = 0;
+            int vendidos = 0;
+         
+            int total_bodegas=0;
+
 
             for (c = 0; c < ListaCarroCotizacion.size(); c++) {
                
@@ -4148,9 +4198,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 camp.setPRECIO_PARTIDA_TOTAL(ListaCarroCotizacion.get(c).getPRECIO_PARTIDA_TOTAL());
                 camp.setNO_PRODUCTOVENTA(ListaCarroCotizacion.get(c).getNO_PRODUCTOCOTIZA());
                 camp.setNO_COTIZA(ListaCarroCotizacion.get(c).getNO_COTIZA());
-                camp.setAUX_RFC_CLIENTE(ListaCarroCotizacion.get(c).getRFC_CLIENTE());
-
-                consult.guardaVentaCiclo(conecta, objPreConexion, camp);
+                camp.setAUX_RFC_CLIENTE(ListaCarroCotizacion.get(c).getRFC_CLIENTE());              
 
                  p = 0;
 
@@ -4167,28 +4215,50 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 tenango = 0;
                 nuv_stok = 0;
                 aux_stok = 0;
-                totalStock=0;
+               total_bodegas=0;
 
                 for (p = 0; p < ListaBuscarProducto.size(); p++) {
 
                     if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("LOCAL")) {
                         local = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                        //System.out.println("Local:" + local);
+                        //Constantes.enviaMensajeConsola("Local:" + local);
                     }
 
                     if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("CASA")) {
                         casa = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                      //  System.out.println("Casa:" + casa);
+                      //  //Constantes.enviaMensajeConsola("Casa:" + casa);
                     }
 
                     if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("TENANGO")) {
                         tenango = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                       // System.out.println("Tenango:" + tenango);
+                       // //Constantes.enviaMensajeConsola("Tenango:" + tenango);
                     }
 
                 }
                 
-               totalStock=local+casa+tenango;
+
+                
+                //total de productos en refac
+                 total_bodegas=local+casa+tenango;               
+                
+                
+                 
+               // se determina el tipo de entrega                
+                if(local>=Integer.parseInt(camp.getNO_PRODUCTOVENTA())){
+                     camp.setENTREGA("INMEDIATA");
+                }
+                else{
+                    if(total_bodegas>=Integer.parseInt(camp.getNO_PRODUCTOVENTA())){
+                         camp.setENTREGA("TRASPASO");
+                    }
+                    
+                    else{
+                         camp.setENTREGA("POR DEFINIR");
+                    }
+                    
+                }
+                
+                  consult.guardaVentaCiclo(conecta, objPreConexion, camp);
 
                 ////// TERMINA TOTAL DE PRODUCTOS POR BODEGA         
                 if (local >= vendidos) {
@@ -4196,10 +4266,9 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                     camp.setBODEGA("LOCAL");
                     camp.setENTREGA("INMEDIATA");
-                    camp.setSTOCK_ANTERIOR(String.valueOf(totalStock));
-                    consult.actualizaStok(conecta, objPreConexion, camp);
-                    consult.actualizaEntrega(conecta, objPreConexion, camp);
-                     consult.historiaVenta(conecta, objPreConexion, camp);
+                    camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
+                    consult.actualizaStok(conecta, objPreConexion, camp);                  
+                    consult.historiaVenta(conecta, objPreConexion, camp);
                 } else {
 
                     aux_stok = vendidos - local;
@@ -4207,16 +4276,15 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                     camp.setBODEGA("LOCAL");
                     camp.setENTREGA("TRASPASO");
-                      //camp.setSTOCK_ANTERIOR(String.valueOf(totalStock));
-                    consult.actualizaStok(conecta, objPreConexion, camp);
-                    consult.actualizaEntrega(conecta, objPreConexion, camp);
-                    // consult.historiaVenta(conecta, objPreConexion, camp);
+                      camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
+                    consult.actualizaStok(conecta, objPreConexion, camp);                  
+                    consult.historiaVenta(conecta, objPreConexion, camp);
                    
 
                     if (casa >= aux_stok) {
 
                         nuv_stok = casa - aux_stok;
-                          camp.setSTOCK_ANTERIOR(String.valueOf(totalStock));
+                          camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                         camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                         camp.setBODEGA("CASA");
                         consult.actualizaStok(conecta, objPreConexion, camp);
@@ -4224,9 +4292,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                         if (aux_stok > 0) {
                             camp.setCANTIDAD_TRAER(String.valueOf(aux_stok));
                             consult.productoTraer(conecta, objPreConexion, camp);
-                        }
-
-                        System.out.println("traer solo de casa:" + aux_stok);
+                        }                      
 
                     } else {
 
@@ -4234,51 +4300,51 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                         nuv_stok = 0;
                         camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                         camp.setBODEGA("CASA");
-                         // camp.setSTOCK_ANTERIOR(String.valueOf(totalStock));
+                         camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                         consult.actualizaStok(conecta, objPreConexion, camp);
-                        // consult.historiaVenta(conecta, objPreConexion, camp);
+                         consult.historiaVenta(conecta, objPreConexion, camp);
                         if (casa > 0) {
                             camp.setCANTIDAD_TRAER(String.valueOf(casa));
                             consult.productoTraer(conecta, objPreConexion, camp);
                         }
-                        System.out.println("traer todos de casa:" + casa);
+                     
 
                         if (tenango >= aux_stok) {
 
                             nuv_stok = tenango - aux_stok;
                             camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                             camp.setBODEGA("TENANGO");
-                            camp.setSTOCK_ANTERIOR(String.valueOf(totalStock));
+                            camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                             consult.actualizaStok(conecta, objPreConexion, camp);
-                             consult.historiaVenta(conecta, objPreConexion, camp);
+                            consult.historiaVenta(conecta, objPreConexion, camp);
                             if (aux_stok > 0) {
                                 camp.setCANTIDAD_TRAER(String.valueOf(aux_stok));
                                 consult.productoTraer(conecta, objPreConexion, camp);
                             }
-                            System.out.println("traer solo de tenego:" + aux_stok);
+                           
 
                         } else {
                             aux_stok = aux_stok - tenango;
                             nuv_stok = 0;
                             camp.setNUEVOSTOK(String.valueOf(nuv_stok));
-                            //camp.setSTOCK_ANTERIOR(String.valueOf(totalStock));
+                            camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                             camp.setBODEGA("TENANGO");
                             consult.actualizaStok(conecta, objPreConexion, camp);
-                           //  consult.historiaVenta(conecta, objPreConexion, camp);
+                            consult.historiaVenta(conecta, objPreConexion, camp);
                             if (tenango > 0) {
                                 camp.setCANTIDAD_TRAER(String.valueOf(tenango));
                                 consult.productoTraer(conecta, objPreConexion, camp);
                             }
-                            System.out.println("traer todos de tenango:" + tenango);
+                           
 
                             if (aux_stok > 0) {
                                 camp.setBODEGA("COMPRAR");
                                 camp.setENTREGA("POR DEFINIR");
                                 camp.setCANTIDAD_TRAER(String.valueOf(aux_stok));
-                                camp.setSTOCK_ANTERIOR(String.valueOf(totalStock));
+                                camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                                  consult.historiaVenta(conecta, objPreConexion, camp);
                                 consult.productoTraer(conecta, objPreConexion, camp);
-                                consult.actualizaEntrega(conecta, objPreConexion, camp);
+                               
                             }
 
                         }
@@ -4290,22 +4356,43 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
             cierraConexiones();
-
-            consult.actualizaEstadoCotiza(camp);
-
-            /*
-         
-          
-          
-             */
-            traerProducto();
-            //consult.actualizaEstadoCotiza(camp);
-
-            // buscarProductosVenta();
+            consult.actualizaEstadoCotiza(camp);            
+            traerProducto();           
+           limpiarVenta();
+            //Constantes.enviaMensajeConsola("termine de guardar la venta ");
         } catch (Exception e) {
+            
+            System.out.println(e);
         }
 
         return "SUCCESS";
+    }
+    
+    public void limpiarVenta(){
+        
+        ListaProductoAlt=null;
+        ListaProductoHist=null;
+        ListaBuscarProducto=null;
+        ListaPedidosBuscar=null;
+        ListaBuscarProductoLike=null;
+        
+    }
+    
+     public void inicializaVentaCot(){
+        
+        ListaProductoAlt=null;
+        ListaProductoHist=null;
+        ListaBuscarProducto=null;
+        ListaPedidosBuscar=null;
+        ListaBuscarProductoLike=null;
+        ListaCarritoPedidos=null;
+        ListaCarroCotizacion=null;
+       camp.setNO_VENTA("");
+       camp.setNO_COTIZA("");
+       camp.setNO_COTIZACION("");
+       camp.setRFC_CLIENTE(null);
+       camp.setAUX_RFC_CLIENTE(null);
+        
     }
 
     public String traerProducto() {
@@ -4330,6 +4417,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaTraerProducto = consult.traerProducto(camp);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4357,6 +4445,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
            // ListaTraerProducto = consult.traerProducto(camp);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4385,9 +4474,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
           listaHistoriaProducto = consult.buscarProductoHistoria(camp);
           
-            System.out.println("la lista de historia es de "+ listaHistoriaProducto.size() );
+            //Constantes.enviaMensajeConsola("la lista de historia es de "+ listaHistoriaProducto.size() );
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4432,7 +4522,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 }
 
                 camp.setTOTAL_COTIZACION(String.valueOf(total_cotiza));
-                System.out.println("precio final de la cotizacion es:" + camp.getTOTAL_COTIZACION());
+                //Constantes.enviaMensajeConsola("precio final de la cotizacion es:" + camp.getTOTAL_COTIZACION());
 
                 if (camp.getNO_COTIZACION().length() > 0) {
                     consult.actualizarNoCotiza(camp);
@@ -4451,14 +4541,17 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     LVPB = (productosBean) LVP.next();
 
                     camp.setNO_VENTA(LVPB.getNO_VENTA());
-                    System.out.println("EL NUMERO DE VENTA ES:" + LVPB.getNO_VENTA());
+                    //Constantes.enviaMensajeConsola("EL NUMERO DE VENTA ES:" + LVPB.getNO_VENTA());
 
                 }
-                System.out.println("EL NUMERO A CONSULTAR DE VENTA ES:" + camp.getNO_VENTA());
+                //Constantes.enviaMensajeConsola("EL NUMERO A CONSULTAR DE VENTA ES:" + camp.getNO_VENTA());
 
             }
 
         } catch (Exception e) {
+              System.out.println(e);
+            
+          
         }
 
         return "SUCCESS";
@@ -4487,9 +4580,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             //Conexión 
             conecta = consult.crearConexion();
             objConexion = consult.crearStatement(conecta);
-
-            // formato decimal
-            DecimalFormat df = new DecimalFormat("#");
+         
 
             String fecha = fecha();
             // FECHA DEL SISTEMA
@@ -4510,6 +4601,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             int aux_stok = 0;
             int p = 0;
             int vendidos = 0;
+            int total_bodegas=0;
 
             for (c = 0; c < ListaCarroCotizacion.size(); c++) {
 
@@ -4539,34 +4631,56 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 tenango = 0;
                 nuv_stok = 0;
                 aux_stok = 0;
+                total_bodegas=0;
 
                 for (p = 0; p < ListaBuscarProducto.size(); p++) {
 
                     if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("LOCAL")) {
                         local = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                        System.out.println("Local:" + local);
+                        //Constantes.enviaMensajeConsola("Local:" + local);
                     }
 
                     if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("CASA")) {
                         casa = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                        System.out.println("Casa:" + casa);
+                        //Constantes.enviaMensajeConsola("Casa:" + casa);
                     }
 
                     if (ListaBuscarProducto.get(p).getNAME_BODEGA().equals("TENANGO")) {
                         tenango = Integer.parseInt(ListaBuscarProducto.get(p).getCATIDAD());
-                        System.out.println("Tenango:" + tenango);
+                        //Constantes.enviaMensajeConsola("Tenango:" + tenango);
                     }
 
                 }
+                
+                 //total de productos en refac
+                 total_bodegas=local+casa+tenango;               
+                
+                
+                 
+               // se determina el tipo de entrega                
+                if(local>=Integer.parseInt(camp.getNO_PRODUCTOVENTA())){
+                     camp.setENTREGA("INMEDIATA");
+                }
+                else{
+                    if(total_bodegas>=Integer.parseInt(camp.getNO_PRODUCTOVENTA())){
+                         camp.setENTREGA("TRASPASO");
+                    }
+                    
+                    else{
+                         camp.setENTREGA("POR DEFINIR");
+                    }
+                    
+                }
 
                 ////// TERMINA TOTAL DE PRODUCTOS POR BODEGA         
-                if (local >= vendidos) {
+               if (local >= vendidos) {
                     nuv_stok = local - vendidos;
                     camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                     camp.setBODEGA("LOCAL");
                     camp.setENTREGA("INMEDIATA");
-                    consult.actualizaStok(conecta, objPreConexion, camp);
-                    consult.actualizaEntrega(conecta, objPreConexion, camp);
+                    camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
+                    consult.actualizaStok(conecta, objPreConexion, camp);                  
+                    consult.historiaVenta(conecta, objPreConexion, camp);
                 } else {
 
                     aux_stok = vendidos - local;
@@ -4574,21 +4688,23 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                     camp.setBODEGA("LOCAL");
                     camp.setENTREGA("TRASPASO");
-                    consult.actualizaStok(conecta, objPreConexion, camp);
-                    consult.actualizaEntrega(conecta, objPreConexion, camp);
+                      camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
+                    consult.actualizaStok(conecta, objPreConexion, camp);                  
+                    consult.historiaVenta(conecta, objPreConexion, camp);
+                   
 
                     if (casa >= aux_stok) {
 
                         nuv_stok = casa - aux_stok;
+                          camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                         camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                         camp.setBODEGA("CASA");
                         consult.actualizaStok(conecta, objPreConexion, camp);
+                          consult.historiaVenta(conecta, objPreConexion, camp);
                         if (aux_stok > 0) {
                             camp.setCANTIDAD_TRAER(String.valueOf(aux_stok));
                             consult.productoTraer(conecta, objPreConexion, camp);
-                        }
-
-                        System.out.println("traer solo de casa:" + aux_stok);
+                        }                      
 
                     } else {
 
@@ -4596,43 +4712,51 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                         nuv_stok = 0;
                         camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                         camp.setBODEGA("CASA");
+                         camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                         consult.actualizaStok(conecta, objPreConexion, camp);
+                         consult.historiaVenta(conecta, objPreConexion, camp);
                         if (casa > 0) {
                             camp.setCANTIDAD_TRAER(String.valueOf(casa));
                             consult.productoTraer(conecta, objPreConexion, camp);
                         }
-                        System.out.println("traer todos de casa:" + casa);
+                     
 
                         if (tenango >= aux_stok) {
 
                             nuv_stok = tenango - aux_stok;
                             camp.setNUEVOSTOK(String.valueOf(nuv_stok));
                             camp.setBODEGA("TENANGO");
+                            camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                             consult.actualizaStok(conecta, objPreConexion, camp);
+                            consult.historiaVenta(conecta, objPreConexion, camp);
                             if (aux_stok > 0) {
                                 camp.setCANTIDAD_TRAER(String.valueOf(aux_stok));
                                 consult.productoTraer(conecta, objPreConexion, camp);
                             }
-                            System.out.println("traer solo de tenego:" + aux_stok);
+                           
 
                         } else {
                             aux_stok = aux_stok - tenango;
                             nuv_stok = 0;
                             camp.setNUEVOSTOK(String.valueOf(nuv_stok));
+                            camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
                             camp.setBODEGA("TENANGO");
                             consult.actualizaStok(conecta, objPreConexion, camp);
+                            consult.historiaVenta(conecta, objPreConexion, camp);
                             if (tenango > 0) {
                                 camp.setCANTIDAD_TRAER(String.valueOf(tenango));
                                 consult.productoTraer(conecta, objPreConexion, camp);
                             }
-                            System.out.println("traer todos de tenango:" + tenango);
+                           
 
                             if (aux_stok > 0) {
                                 camp.setBODEGA("COMPRAR");
                                 camp.setENTREGA("POR DEFINIR");
                                 camp.setCANTIDAD_TRAER(String.valueOf(aux_stok));
+                                camp.setSTOCK_ANTERIOR(String.valueOf(total_bodegas));
+                                 consult.historiaVenta(conecta, objPreConexion, camp);
                                 consult.productoTraer(conecta, objPreConexion, camp);
-                                consult.actualizaEntrega(conecta, objPreConexion, camp);
+                               
                             }
 
                         }
@@ -4657,6 +4781,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             addActionError("La venta se ha guardado");
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4700,7 +4825,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 }
 
                 camp.setTOTAL_COTIZACION(String.valueOf(total_cotiza));
-                System.out.println("precio final de la cotizacion es:" + camp.getTOTAL_COTIZACION());
+                //Constantes.enviaMensajeConsola("precio final de la cotizacion es:" + camp.getTOTAL_COTIZACION());
 
                 if (camp.getNO_COTIZACION().length() > 0) {
                     consult.actualizarNoCotiza(camp);
@@ -4709,6 +4834,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4744,6 +4870,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             traerProducto();
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4775,6 +4902,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             traerProducto();
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4817,6 +4945,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaTraerProducto = consult.traerProducto(camp);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4859,6 +4988,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaTraerProducto = consult.traerProducto(camp);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4885,7 +5015,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             ListaCarroCotizacion = consult.ventaConsultaCobra(camp);
 
-            System.out.println("Lita" + ListaCarroCotizacion.size());
+            //Constantes.enviaMensajeConsola("Lita" + ListaCarroCotizacion.size());
 
             Iterator LCC = ListaCarroCotizacion.iterator();
             productosBean LLCB;
@@ -4921,7 +5051,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     }
                 }
 
-                System.out.println("Razon social" + camp.getRAZONSOCIAL());
+                //Constantes.enviaMensajeConsola("Razon social" + camp.getRAZONSOCIAL());
 
                 banfacturasi = true;
 
@@ -4929,9 +5059,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             // ListaTraerProducto=consult.traerProducto(camp);
             camp.setFOLIOSRESTANTES(String.valueOf(TimbrarXml.consultaFolio()));
-            System.out.println("folios restantes" + camp.getFOLIOSRESTANTES());
+            //Constantes.enviaMensajeConsola("folios restantes" + camp.getFOLIOSRESTANTES());
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4957,6 +5088,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ConsultaBusiness consult = new ConsultaBusiness();
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -4980,13 +5112,14 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
             ConsultaBusiness consult = new ConsultaBusiness();
-            System.out.println("Llegue al modulo de cobranza cobrar Actualiza");
+            //Constantes.enviaMensajeConsola("Llegue al modulo de cobranza cobrar Actualiza");
             camp.setESTADO_VENTA("2");
 
             consult.actualizaCobra(camp);
 
             //addActionError("La nota se ha cobrado");
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5012,7 +5145,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             Thread.sleep(8000);
 
             ConsultaBusiness consult = new ConsultaBusiness();
-            System.out.println("Llegue al modulo de cobranza cobrar Actualiza");
+            //Constantes.enviaMensajeConsola("Llegue al modulo de cobranza cobrar Actualiza");
             camp.setESTADO_VENTA("2");
 
             consult.actualizaCobra(camp);
@@ -5021,6 +5154,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             addActionError("La servivio de facturación no esta disponible en este momento intentaré más tarde");
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5067,6 +5201,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             camp.setTOTAL_COTIZACION(String.valueOf(total_general_detalle));
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5097,7 +5232,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             camp.setFECHA_CONSULTA(fecha);
 
             if (camp.getFECHA_INICIO().length() > 0 || camp.getFECHA_FINAL().length() > 0) {
-                System.out.println("ENTRE A DETALLE DE NOTAS CON FECHA");
+                //Constantes.enviaMensajeConsola("ENTRE A DETALLE DE NOTAS CON FECHA");
                 ListaCarroCotizacion = consult.ventaConsultaDiaFecha(camp);
 
                 Iterator LCC = ListaCarroCotizacion.iterator();
@@ -5136,6 +5271,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             }
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5182,6 +5318,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             }
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5213,6 +5350,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             ListaStok = consult.listaStok0(camp);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5246,6 +5384,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             }
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5275,6 +5414,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             camp.setFECHA_CONSULTA(fecha);
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5339,7 +5479,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 cantidad = 1;
             }
 
-            System.out.println("la cantidad de productos a vender es:");
+            //Constantes.enviaMensajeConsola("la cantidad de productos a vender es:");
 
             Iterator cgeBP = ListaBuscarProductoFinal.iterator();
             productosBean pbBP;
@@ -5361,7 +5501,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     ganancia = Float.parseFloat(pbBP.getGANANCIA());
                 }
                 
-                precioUniPartida = calculaPrecio(pbBP.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), cantidad);
+                precioUniPartida = calculaPrecio(pbBP.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), cantidad, ivacalcula, dolarcalcula);
 
                 
                 
@@ -5395,7 +5535,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             if (ListaProductoHist.size() > 0) {
 
-                System.out.println("ENTRE A CONSULTAR LA HISTORIA DEL PRODUCTO");
+                //Constantes.enviaMensajeConsola("ENTRE A CONSULTAR LA HISTORIA DEL PRODUCTO");
                 Iterator cge = ListaProductoHist.iterator();
 
                 productosBean pb;
@@ -5405,7 +5545,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     precio = Float.parseFloat(pb.getPRECIO());
                     ganancia = Float.parseFloat(pb.getGANANCIA());
 
-                    precioUniPartida = calculaPrecio(pb.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1);
+                    precioUniPartida = calculaPrecio(pb.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1, ivacalcula, dolarcalcula);
 
            
 
@@ -5432,7 +5572,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     pbAlt = (productosBean) cgeAlt.next();
                     precio = Float.parseFloat(pbAlt.getPRECIO());
                     
-                     precioUniPartida = calculaPrecio(pbAlt.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1);
+                     precioUniPartida = calculaPrecio(pbAlt.getMONEDA(), ganancia, precio, camp.getINCREMENTO(), 1, ivacalcula, dolarcalcula);
 
              
 
@@ -5450,7 +5590,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
             /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+             System.out.println(e);
             return "ERROR";
         }
 
@@ -5466,6 +5606,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             buscarAlternativos();
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5479,6 +5620,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             buscarAlternativos();
 
         } catch (Exception e) {
+              System.out.println(e);
         }
 
         return "SUCCESS";
@@ -5489,11 +5631,11 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             objConexion.close();
             //objPreConexion.close();
             conecta.close();
-            System.out.println("******************************Conexion cerrada************************************ ");
+            //Constantes.enviaMensajeConsola("******************************Conexion cerrada************************************ ");
 
         } catch (Exception e) {
             e.printStackTrace();
-            System.out.println("Ocurrio un error al cerrar conexiones: " + e);
+            //Constantes.enviaMensajeConsola("Ocurrio un error al cerrar conexiones: " + e);
 
         }
     }
@@ -5523,9 +5665,9 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             dolar = consult.dolarCambio();
             camp.setDOLAR(dolar);
 
-            //System.out.println("Entre a tipo  de cambio:" );
+            //Constantes.enviaMensajeConsola("Entre a tipo  de cambio:" );
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+             System.out.println(e);
             return "ERROR";
         }
 
@@ -5557,10 +5699,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             addFieldError("EXITO", "¡Se guardo con éxito el nuevo tipo de cambio!");
             tipocambio();
 
-            Constantes.enviaMensajeConsola("Actuallize el tipo de cambio");
+            //Constantes.enviaMensajeConsola("Actuallize el tipo de cambio");
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+             System.out.println(e);
             return "ERROR";
         }
 
@@ -5590,11 +5732,11 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             bancrednotaAbonos = false;
 
             if (camp.getBUSCARCLIENTE() == null) {
-                Constantes.enviaMensajeConsola("entre opcion 1");
+                //Constantes.enviaMensajeConsola("entre opcion 1");
 
                 listaCreditos = consult.creditosGeneral(camp);
             } else {
-                Constantes.enviaMensajeConsola("entre opcion 2");
+                //Constantes.enviaMensajeConsola("entre opcion 2");
                 listaCreditos = consult.creditosGeneraLike(camp);
 
             }
@@ -5614,11 +5756,11 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             camp.setTOTAL_APORTACIONES_DEUDA_GENERAL(aportaciones);
             camp.setSALDO_DEUDA_GENERAL(saldo);
 
-            Constantes.enviaMensajeConsola("TOTAL_DEUDA_GENERAL" + camp.getTOTAL_DEUDA_GENERAL());
-            Constantes.enviaMensajeConsola("Créditos abiertos:" + listaCreditos.size());
+            //Constantes.enviaMensajeConsola("TOTAL_DEUDA_GENERAL" + camp.getTOTAL_DEUDA_GENERAL());
+            //Constantes.enviaMensajeConsola("Créditos abiertos:" + listaCreditos.size());
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+            System.out.println(e);
             return "ERROR";
         }
 
@@ -5650,19 +5792,19 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             bancrednota = true;
 
             if (camp.getNO_VENTA().equals("") || camp.getNO_VENTA() == null) {
-                Constantes.enviaMensajeConsola("entre opcion 1");
+                //Constantes.enviaMensajeConsola("entre opcion 1");
 
                 listaCreditosNota = consult.creditosNota(camp);
             } else {
-                Constantes.enviaMensajeConsola("entre opcion 2");
+                //Constantes.enviaMensajeConsola("entre opcion 2");
                 listaCreditosNota = consult.creditosNotaNoVenta(camp);
 
             }
 
-            Constantes.enviaMensajeConsola("listaCreditosNota" + listaCreditosNota.size());
+            //Constantes.enviaMensajeConsola("listaCreditosNota" + listaCreditosNota.size());
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+             System.out.println(e);
             return "ERROR";
         }
 
@@ -5694,10 +5836,10 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             bancrednotaAbonos = true;
 
             listaCreditosNotaAbonos = consult.creditosNotaAbonos(camp);
-            Constantes.enviaMensajeConsola("listaCreditosNotaAbonos" + listaCreditosNotaAbonos.size());
+            //Constantes.enviaMensajeConsola("listaCreditosNotaAbonos" + listaCreditosNotaAbonos.size());
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+            System.out.println(e);
             return "ERROR";
         }
 
@@ -5733,7 +5875,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             consult.guardaAbonos(camp, no_venta, abono);
 
         } catch (Exception e) {
-            addActionError("Ocurrio un error: " + e);
+              System.out.println(e);
             return "ERROR";
         }
 
@@ -5741,7 +5883,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
     }
 
     public int validaRfc(String rfc) {
-        System.out.println("action.Consultas_Action.validaRfc()");
+        //Constantes.enviaMensajeConsola("action.Consultas_Action.validaRfc()");
         Pattern pat = Pattern.compile("^([A-ZÑ\\x26]{3,4}([0-9]{2})(0[1-9]|1[0-2])(0[1-9]|1[0-9]|2[0-9]|3[0-1]))([A-Z\\d]{3})?$");
         Matcher mat = pat.matcher(rfc);
         if (mat.find()) {

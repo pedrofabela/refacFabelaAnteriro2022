@@ -79,7 +79,7 @@ public class ConstantesGenerales {
     public static final String usuarioFolios = "FAMJ810312FY6"; 
     public static final String passwordFolios = "1Nfzoaj@";  
     public static final String emailusuario = "ventas@refaccionesfabela.com";
-    public static final String emailpass = "fabela20";     
+    public static final String emailpass = "K!Peak,HrPs!";     
     public static final String rutaxmlTimbrado = "/apache-tomcat-8.5.63/webapps/xml/";
     public static final String rutaPdf = "/apache-tomcat-8.5.63/webapps/pdf/";
     public static final String rutaCer = "/opt/facturas/archivos/00001000000506837151.cer";

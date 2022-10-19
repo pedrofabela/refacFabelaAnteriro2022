@@ -3,19 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/cerrar.png</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/ico-ventas.png</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/maquina.png</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/almacen.png</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/maquina.jpg</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/BORRAR.png</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/carro.png</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/pages/clientes.jsp</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/src/java/utilidades/ConstantesGenerales.java</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/banner-login.jpg</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/src/java/action/Consultas_Action.java</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/compras.png</file>
-            <file>file:/home/pedro/NetBeansProjects/refacfabelaultimo/web/img/iconModificar.png</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/conf/xml-resources/web-service-references/WSCFDI33/wsdl/www.foliosdigitalespac.com/WSTimbrado33/WSCFDI33.svc.wsdl</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/action/Factura_Action.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/action/Consultas_Action.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/daos/GeneraXml.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/daos/TimbrarXml.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/daos/OracleDAOFactory.java</file>
         </group>
     </open-files>
 </project-private>

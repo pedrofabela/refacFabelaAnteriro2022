@@ -39,13 +39,13 @@ public class OracleDAOFactory implements DAOFactory {
     
      /*/ DESARROLLO
     private String username = "REFACFAB";	
-    private String url = "jdbc:oracle:thin:@172.20.2.160:1521:xe";	
+    private String url = "jdbc:oracle:thin:@localhost:1521:xe";	
     private String password = "fabela041287p"; 
 	//*/
     
     // PRODUCCION
     private String username = "REFACFAB";	
-    private String url = "jdbc:oracle:thin:@192.168.3.36:1521:xe";	
+    private String url = "jdbc:oracle:thin:@192.168.0.4:1521:xe";	
     private String password = "fabela041287p"; 
 	//*/
     
