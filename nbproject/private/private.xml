@@ -3,12 +3,39 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/conf/xml-resources/web-service-references/WSCFDI33/wsdl/www.foliosdigitalespac.com/WSTimbrado33/WSCFDI33.svc.wsdl</file>
-            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/action/Factura_Action.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/usuarios.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/ingresoProductos.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/productosStok0.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/utilidades/Constantes.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/tipocambio.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/consultaVentaCancela.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/clientes.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/consultaCotizacion.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/creditos.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/consultaVentaAlmacen.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/Scripts.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/daos/ConsultaUsuarioDAO.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/ingresoAlmacen.jsp</file>
             <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/action/Consultas_Action.java</file>
-            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/daos/GeneraXml.java</file>
-            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/daos/TimbrarXml.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/facturaprueba.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/registroPedidos.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/alternativos.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/stockProductos.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/login.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/cerrarCaja.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/menu.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/historiaProducto.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/menuServicioAdmon.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/business/ConsultaBusiness.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/consultaVentaCobra.jsp</file>
             <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/daos/OracleDAOFactory.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/inventario.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/seguimientoPedidos.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/src/java/daos/ConsultaDAOImpl.java</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/consultaVenta.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/nuevaVenta.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/traspasos.jsp</file>
+            <file>file:/C:/Users/pedro/Documents/NetBeansProjects/refacfabelaultimo/web/pages/proveedores.jsp</file>
         </group>
     </open-files>
 </project-private>

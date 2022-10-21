@@ -37,45 +37,45 @@ import org.datacontract.schemas._2004._07.tes_tfd_v33.RespuestaValidacionRFC;
 @XmlRegistry
 public class ObjectFactory {
 
-    private final static QName _ConsultarComplementoTimbrePassword_QNAME = new QName("http://tempuri.org/", "password");
-    private final static QName _ConsultarComplementoTimbreUsuario_QNAME = new QName("http://tempuri.org/", "usuario");
-    private final static QName _ConsultarComplementoTimbreUUID_QNAME = new QName("http://tempuri.org/", "uUID");
-    private final static QName _EstatusCancelacionAsincronaResponseEstatusCancelacionAsincronaResult_QNAME = new QName("http://tempuri.org/", "EstatusCancelacionAsincronaResult");
-    private final static QName _ProcesarAceptacionRechazoResponseProcesarAceptacionRechazoResult_QNAME = new QName("http://tempuri.org/", "ProcesarAceptacionRechazoResult");
-    private final static QName _ConsultarTimbrePorSelloSello_QNAME = new QName("http://tempuri.org/", "sello");
-    private final static QName _ObtenerPDFResponseObtenerPDFResult_QNAME = new QName("http://tempuri.org/", "ObtenerPDFResult");
+    private final static QName _ObtenerPeticionesPendientesCancelacionPassword_QNAME = new QName("http://tempuri.org/", "password");
+    private final static QName _ObtenerPeticionesPendientesCancelacionRFCReceptor_QNAME = new QName("http://tempuri.org/", "rFCReceptor");
+    private final static QName _ObtenerPeticionesPendientesCancelacionUsuario_QNAME = new QName("http://tempuri.org/", "usuario");
+    private final static QName _ObtenerAcuseEnvioResponseObtenerAcuseEnvioResult_QNAME = new QName("http://tempuri.org/", "ObtenerAcuseEnvioResult");
     private final static QName _CancelacionAsincronaPasswordClavePrivada_QNAME = new QName("http://tempuri.org/", "passwordClavePrivada");
     private final static QName _CancelacionAsincronaClavePrivadaBase64_QNAME = new QName("http://tempuri.org/", "clavePrivada_Base64");
     private final static QName _CancelacionAsincronaListaCFDI_QNAME = new QName("http://tempuri.org/", "listaCFDI");
     private final static QName _CancelacionAsincronaRFCEmisor_QNAME = new QName("http://tempuri.org/", "rFCEmisor");
-    private final static QName _EstatusCancelacionAsincronaReferencia_QNAME = new QName("http://tempuri.org/", "referencia");
-    private final static QName _ConsultarCreditosResponseConsultarCreditosResult_QNAME = new QName("http://tempuri.org/", "ConsultarCreditosResult");
-    private final static QName _CancelarCFDIResponseCancelarCFDIResult_QNAME = new QName("http://tempuri.org/", "CancelarCFDIResult");
-    private final static QName _ConsultarTimbrePorReferenciaResponseConsultarTimbrePorReferenciaResult_QNAME = new QName("http://tempuri.org/", "ConsultarTimbrePorReferenciaResult");
-    private final static QName _ProcesarAceptacionRechazoUUIDs_QNAME = new QName("http://tempuri.org/", "uUIDs");
-    private final static QName _ProcesarAceptacionRechazoRFCReceptor_QNAME = new QName("http://tempuri.org/", "rFCReceptor");
-    private final static QName _ObtenerAcuseCancelacionResponseObtenerAcuseCancelacionResult_QNAME = new QName("http://tempuri.org/", "ObtenerAcuseCancelacionResult");
+    private final static QName _ConsultarComplementoTimbreResponseConsultarComplementoTimbreResult_QNAME = new QName("http://tempuri.org/", "ConsultarComplementoTimbreResult");
+    private final static QName _ObtenerPDFResponseObtenerPDFResult_QNAME = new QName("http://tempuri.org/", "ObtenerPDFResult");
     private final static QName _CambiarPasswordPasswordNuevo_QNAME = new QName("http://tempuri.org/", "passwordNuevo");
     private final static QName _CambiarPasswordPasswordActual_QNAME = new QName("http://tempuri.org/", "passwordActual");
-    private final static QName _ConsultarComplementoTimbreResponseConsultarComplementoTimbreResult_QNAME = new QName("http://tempuri.org/", "ConsultarComplementoTimbreResult");
-    private final static QName _CancelarCFDIConValidacionResponseCancelarCFDIConValidacionResult_QNAME = new QName("http://tempuri.org/", "CancelarCFDIConValidacionResult");
-    private final static QName _ObtenerAcuseEnvioResponseObtenerAcuseEnvioResult_QNAME = new QName("http://tempuri.org/", "ObtenerAcuseEnvioResult");
-    private final static QName _TimbrarCFDICadenaXML_QNAME = new QName("http://tempuri.org/", "cadenaXML");
-    private final static QName _ConsultarComprobantesResponseConsultarComprobantesResult_QNAME = new QName("http://tempuri.org/", "ConsultarComprobantesResult");
-    private final static QName _ValidarRFCRfc_QNAME = new QName("http://tempuri.org/", "rfc");
+    private final static QName _ValidarRFCResponseValidarRFCResult_QNAME = new QName("http://tempuri.org/", "ValidarRFCResult");
+    private final static QName _CancelarCFDIResponseCancelarCFDIResult_QNAME = new QName("http://tempuri.org/", "CancelarCFDIResult");
+    private final static QName _EstatusCancelacionAsincronaResponseEstatusCancelacionAsincronaResult_QNAME = new QName("http://tempuri.org/", "EstatusCancelacionAsincronaResult");
+    private final static QName _ObtenerAcuseCancelacionResponseObtenerAcuseCancelacionResult_QNAME = new QName("http://tempuri.org/", "ObtenerAcuseCancelacionResult");
+    private final static QName _ConsultarComplementoTimbreUUID_QNAME = new QName("http://tempuri.org/", "uUID");
+    private final static QName _EstatusCancelacionAsincronaReferencia_QNAME = new QName("http://tempuri.org/", "referencia");
+    private final static QName _CancelacionAsincronaResponseCancelacionAsincronaResult_QNAME = new QName("http://tempuri.org/", "CancelacionAsincronaResult");
+    private final static QName _ObtenerPeticionesPendientesCancelacionResponseObtenerPeticionesPendientesCancelacionResult_QNAME = new QName("http://tempuri.org/", "ObtenerPeticionesPendientesCancelacionResult");
     private final static QName _ConsultarComprobantesRelacionadosRFCReceptor_QNAME = new QName("http://tempuri.org/", "RFCReceptor");
     private final static QName _ConsultarComprobantesRelacionadosPfxReceptorBase64_QNAME = new QName("http://tempuri.org/", "pfxReceptorBase64");
     private final static QName _ConsultarComprobantesRelacionadosRFCEmisor_QNAME = new QName("http://tempuri.org/", "RFCEmisor");
     private final static QName _ConsultarComprobantesRelacionadosUUID_QNAME = new QName("http://tempuri.org/", "UUID");
     private final static QName _ConsultarComprobantesRelacionadosPasswdPfx_QNAME = new QName("http://tempuri.org/", "passwdPfx");
     private final static QName _ConsultarComprobantesRelacionadosResponseConsultarComprobantesRelacionadosResult_QNAME = new QName("http://tempuri.org/", "ConsultarComprobantesRelacionadosResult");
-    private final static QName _ObtenerPeticionesPendientesCancelacionResponseObtenerPeticionesPendientesCancelacionResult_QNAME = new QName("http://tempuri.org/", "ObtenerPeticionesPendientesCancelacionResult");
-    private final static QName _ValidarRFCResponseValidarRFCResult_QNAME = new QName("http://tempuri.org/", "ValidarRFCResult");
+    private final static QName _ConsultarTimbrePorReferenciaResponseConsultarTimbrePorReferenciaResult_QNAME = new QName("http://tempuri.org/", "ConsultarTimbrePorReferenciaResult");
+    private final static QName _ConsultarCreditosResponseConsultarCreditosResult_QNAME = new QName("http://tempuri.org/", "ConsultarCreditosResult");
     private final static QName _CambiarPasswordResponseCambiarPasswordResult_QNAME = new QName("http://tempuri.org/", "CambiarPasswordResult");
-    private final static QName _ObtenerPDFLogoBase64_QNAME = new QName("http://tempuri.org/", "LogoBase64");
+    private final static QName _CancelarCFDIConValidacionResponseCancelarCFDIConValidacionResult_QNAME = new QName("http://tempuri.org/", "CancelarCFDIConValidacionResult");
     private final static QName _TimbrarCFDIResponseTimbrarCFDIResult_QNAME = new QName("http://tempuri.org/", "TimbrarCFDIResult");
-    private final static QName _CancelacionAsincronaResponseCancelacionAsincronaResult_QNAME = new QName("http://tempuri.org/", "CancelacionAsincronaResult");
     private final static QName _ConsultarTimbrePorSelloResponseConsultarTimbrePorSelloResult_QNAME = new QName("http://tempuri.org/", "ConsultarTimbrePorSelloResult");
+    private final static QName _ProcesarAceptacionRechazoResponseProcesarAceptacionRechazoResult_QNAME = new QName("http://tempuri.org/", "ProcesarAceptacionRechazoResult");
+    private final static QName _ObtenerPDFLogoBase64_QNAME = new QName("http://tempuri.org/", "LogoBase64");
+    private final static QName _ConsultarComprobantesResponseConsultarComprobantesResult_QNAME = new QName("http://tempuri.org/", "ConsultarComprobantesResult");
+    private final static QName _ProcesarAceptacionRechazoUUIDs_QNAME = new QName("http://tempuri.org/", "uUIDs");
+    private final static QName _ValidarRFCRfc_QNAME = new QName("http://tempuri.org/", "rfc");
+    private final static QName _ConsultarTimbrePorSelloSello_QNAME = new QName("http://tempuri.org/", "sello");
+    private final static QName _TimbrarCFDICadenaXML_QNAME = new QName("http://tempuri.org/", "cadenaXML");
 
     /**
      * Create a new ObjectFactory that can be used to create new instances of schema derived classes for package: org.tempuri
@@ -376,99 +376,36 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarComplementoTimbre.class)
-    public JAXBElement<String> createConsultarComplementoTimbrePassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ConsultarComplementoTimbre.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ObtenerPeticionesPendientesCancelacion.class)
+    public JAXBElement<String> createObtenerPeticionesPendientesCancelacionPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ObtenerPeticionesPendientesCancelacion.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarComplementoTimbre.class)
-    public JAXBElement<String> createConsultarComplementoTimbreUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ConsultarComplementoTimbre.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rFCReceptor", scope = ObtenerPeticionesPendientesCancelacion.class)
+    public JAXBElement<String> createObtenerPeticionesPendientesCancelacionRFCReceptor(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionRFCReceptor_QNAME, String.class, ObtenerPeticionesPendientesCancelacion.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "uUID", scope = ConsultarComplementoTimbre.class)
-    public JAXBElement<String> createConsultarComplementoTimbreUUID(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUUID_QNAME, String.class, ConsultarComplementoTimbre.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaEstatusCancelacionAsincrona }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "EstatusCancelacionAsincronaResult", scope = EstatusCancelacionAsincronaResponse.class)
-    public JAXBElement<RespuestaEstatusCancelacionAsincrona> createEstatusCancelacionAsincronaResponseEstatusCancelacionAsincronaResult(RespuestaEstatusCancelacionAsincrona value) {
-        return new JAXBElement<RespuestaEstatusCancelacionAsincrona>(_EstatusCancelacionAsincronaResponseEstatusCancelacionAsincronaResult_QNAME, RespuestaEstatusCancelacionAsincrona.class, EstatusCancelacionAsincronaResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaAceptacionRechazo }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ProcesarAceptacionRechazoResult", scope = ProcesarAceptacionRechazoResponse.class)
-    public JAXBElement<RespuestaAceptacionRechazo> createProcesarAceptacionRechazoResponseProcesarAceptacionRechazoResult(RespuestaAceptacionRechazo value) {
-        return new JAXBElement<RespuestaAceptacionRechazo>(_ProcesarAceptacionRechazoResponseProcesarAceptacionRechazoResult_QNAME, RespuestaAceptacionRechazo.class, ProcesarAceptacionRechazoResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarComprobantes.class)
-    public JAXBElement<String> createConsultarComprobantesPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ConsultarComprobantes.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarComprobantes.class)
-    public JAXBElement<String> createConsultarComprobantesUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ConsultarComprobantes.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarTimbrePorSello.class)
-    public JAXBElement<String> createConsultarTimbrePorSelloPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ConsultarTimbrePorSello.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarTimbrePorSello.class)
-    public JAXBElement<String> createConsultarTimbrePorSelloUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ConsultarTimbrePorSello.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "sello", scope = ConsultarTimbrePorSello.class)
-    public JAXBElement<String> createConsultarTimbrePorSelloSello(String value) {
-        return new JAXBElement<String>(_ConsultarTimbrePorSelloSello_QNAME, String.class, ConsultarTimbrePorSello.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ObtenerPeticionesPendientesCancelacion.class)
+    public JAXBElement<String> createObtenerPeticionesPendientesCancelacionUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ObtenerPeticionesPendientesCancelacion.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ObtenerPDFResult", scope = ObtenerPDFResponse.class)
-    public JAXBElement<RespuestaTFD33> createObtenerPDFResponseObtenerPDFResult(RespuestaTFD33 value) {
-        return new JAXBElement<RespuestaTFD33>(_ObtenerPDFResponseObtenerPDFResult_QNAME, RespuestaTFD33 .class, ObtenerPDFResponse.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ObtenerAcuseEnvioResult", scope = ObtenerAcuseEnvioResponse.class)
+    public JAXBElement<RespuestaTFD33> createObtenerAcuseEnvioResponseObtenerAcuseEnvioResult(RespuestaTFD33 value) {
+        return new JAXBElement<RespuestaTFD33>(_ObtenerAcuseEnvioResponseObtenerAcuseEnvioResult_QNAME, RespuestaTFD33 .class, ObtenerAcuseEnvioResponse.class, value);
     }
 
     /**
@@ -486,7 +423,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = CancelacionAsincrona.class)
     public JAXBElement<String> createCancelacionAsincronaPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, CancelacionAsincrona.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, CancelacionAsincrona.class, value);
     }
 
     /**
@@ -513,7 +450,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = CancelacionAsincrona.class)
     public JAXBElement<String> createCancelacionAsincronaUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, CancelacionAsincrona.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, CancelacionAsincrona.class, value);
     }
 
     /**
@@ -526,30 +463,147 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ObtenerAcuseEnvio.class)
-    public JAXBElement<String> createObtenerAcuseEnvioPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ObtenerAcuseEnvio.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarComplementoTimbreResult", scope = ConsultarComplementoTimbreResponse.class)
+    public JAXBElement<RespuestaTFD33> createConsultarComplementoTimbreResponseConsultarComplementoTimbreResult(RespuestaTFD33 value) {
+        return new JAXBElement<RespuestaTFD33>(_ConsultarComplementoTimbreResponseConsultarComplementoTimbreResult_QNAME, RespuestaTFD33 .class, ConsultarComplementoTimbreResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ObtenerPDFResult", scope = ObtenerPDFResponse.class)
+    public JAXBElement<RespuestaTFD33> createObtenerPDFResponseObtenerPDFResult(RespuestaTFD33 value) {
+        return new JAXBElement<RespuestaTFD33>(_ObtenerPDFResponseObtenerPDFResult_QNAME, RespuestaTFD33 .class, ObtenerPDFResponse.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ObtenerAcuseEnvio.class)
-    public JAXBElement<String> createObtenerAcuseEnvioUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ObtenerAcuseEnvio.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "passwordNuevo", scope = CambiarPassword.class)
+    public JAXBElement<String> createCambiarPasswordPasswordNuevo(String value) {
+        return new JAXBElement<String>(_CambiarPasswordPasswordNuevo_QNAME, String.class, CambiarPassword.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "uUID", scope = ObtenerAcuseEnvio.class)
-    public JAXBElement<String> createObtenerAcuseEnvioUUID(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUUID_QNAME, String.class, ObtenerAcuseEnvio.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = CambiarPassword.class)
+    public JAXBElement<String> createCambiarPasswordUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, CambiarPassword.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "passwordActual", scope = CambiarPassword.class)
+    public JAXBElement<String> createCambiarPasswordPasswordActual(String value) {
+        return new JAXBElement<String>(_CambiarPasswordPasswordActual_QNAME, String.class, CambiarPassword.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarComprobantes.class)
+    public JAXBElement<String> createConsultarComprobantesPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ConsultarComprobantes.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarComprobantes.class)
+    public JAXBElement<String> createConsultarComprobantesUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ConsultarComprobantes.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaValidacionRFC }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ValidarRFCResult", scope = ValidarRFCResponse.class)
+    public JAXBElement<RespuestaValidacionRFC> createValidarRFCResponseValidarRFCResult(RespuestaValidacionRFC value) {
+        return new JAXBElement<RespuestaValidacionRFC>(_ValidarRFCResponseValidarRFCResult_QNAME, RespuestaValidacionRFC.class, ValidarRFCResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarCreditos.class)
+    public JAXBElement<String> createConsultarCreditosPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ConsultarCreditos.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarCreditos.class)
+    public JAXBElement<String> createConsultarCreditosUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ConsultarCreditos.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaCancelacion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "CancelarCFDIResult", scope = CancelarCFDIResponse.class)
+    public JAXBElement<RespuestaCancelacion> createCancelarCFDIResponseCancelarCFDIResult(RespuestaCancelacion value) {
+        return new JAXBElement<RespuestaCancelacion>(_CancelarCFDIResponseCancelarCFDIResult_QNAME, RespuestaCancelacion.class, CancelarCFDIResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaEstatusCancelacionAsincrona }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "EstatusCancelacionAsincronaResult", scope = EstatusCancelacionAsincronaResponse.class)
+    public JAXBElement<RespuestaEstatusCancelacionAsincrona> createEstatusCancelacionAsincronaResponseEstatusCancelacionAsincronaResult(RespuestaEstatusCancelacionAsincrona value) {
+        return new JAXBElement<RespuestaEstatusCancelacionAsincrona>(_EstatusCancelacionAsincronaResponseEstatusCancelacionAsincronaResult_QNAME, RespuestaEstatusCancelacionAsincrona.class, EstatusCancelacionAsincronaResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ObtenerAcuseCancelacionResult", scope = ObtenerAcuseCancelacionResponse.class)
+    public JAXBElement<RespuestaTFD33> createObtenerAcuseCancelacionResponseObtenerAcuseCancelacionResult(RespuestaTFD33 value) {
+        return new JAXBElement<RespuestaTFD33>(_ObtenerAcuseCancelacionResponseObtenerAcuseCancelacionResult_QNAME, RespuestaTFD33 .class, ObtenerAcuseCancelacionResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarComplementoTimbre.class)
+    public JAXBElement<String> createConsultarComplementoTimbrePassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ConsultarComplementoTimbre.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarComplementoTimbre.class)
+    public JAXBElement<String> createConsultarComplementoTimbreUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ConsultarComplementoTimbre.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "uUID", scope = ConsultarComplementoTimbre.class)
+    public JAXBElement<String> createConsultarComplementoTimbreUUID(String value) {
+        return new JAXBElement<String>(_ConsultarComplementoTimbreUUID_QNAME, String.class, ConsultarComplementoTimbre.class, value);
     }
 
     /**
@@ -558,7 +612,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = EstatusCancelacionAsincrona.class)
     public JAXBElement<String> createEstatusCancelacionAsincronaPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, EstatusCancelacionAsincrona.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, EstatusCancelacionAsincrona.class, value);
     }
 
     /**
@@ -567,7 +621,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = EstatusCancelacionAsincrona.class)
     public JAXBElement<String> createEstatusCancelacionAsincronaUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, EstatusCancelacionAsincrona.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, EstatusCancelacionAsincrona.class, value);
     }
 
     /**
@@ -580,12 +634,48 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaCreditos }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarCreditosResult", scope = ConsultarCreditosResponse.class)
-    public JAXBElement<RespuestaCreditos> createConsultarCreditosResponseConsultarCreditosResult(RespuestaCreditos value) {
-        return new JAXBElement<RespuestaCreditos>(_ConsultarCreditosResponseConsultarCreditosResult_QNAME, RespuestaCreditos.class, ConsultarCreditosResponse.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ObtenerAcuseCancelacion.class)
+    public JAXBElement<String> createObtenerAcuseCancelacionPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ObtenerAcuseCancelacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ObtenerAcuseCancelacion.class)
+    public JAXBElement<String> createObtenerAcuseCancelacionUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ObtenerAcuseCancelacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "uUID", scope = ObtenerAcuseCancelacion.class)
+    public JAXBElement<String> createObtenerAcuseCancelacionUUID(String value) {
+        return new JAXBElement<String>(_ConsultarComplementoTimbreUUID_QNAME, String.class, ObtenerAcuseCancelacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaCancelacionAsincrona }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "CancelacionAsincronaResult", scope = CancelacionAsincronaResponse.class)
+    public JAXBElement<RespuestaCancelacionAsincrona> createCancelacionAsincronaResponseCancelacionAsincronaResult(RespuestaCancelacionAsincrona value) {
+        return new JAXBElement<RespuestaCancelacionAsincrona>(_CancelacionAsincronaResponseCancelacionAsincronaResult_QNAME, RespuestaCancelacionAsincrona.class, CancelacionAsincronaResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaPeticionesPendientes }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ObtenerPeticionesPendientesCancelacionResult", scope = ObtenerPeticionesPendientesCancelacionResponse.class)
+    public JAXBElement<RespuestaPeticionesPendientes> createObtenerPeticionesPendientesCancelacionResponseObtenerPeticionesPendientesCancelacionResult(RespuestaPeticionesPendientes value) {
+        return new JAXBElement<RespuestaPeticionesPendientes>(_ObtenerPeticionesPendientesCancelacionResponseObtenerPeticionesPendientesCancelacionResult_QNAME, RespuestaPeticionesPendientes.class, ObtenerPeticionesPendientesCancelacionResponse.class, value);
     }
 
     /**
@@ -603,7 +693,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = CancelarCFDI.class)
     public JAXBElement<String> createCancelarCFDIPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, CancelarCFDI.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, CancelarCFDI.class, value);
     }
 
     /**
@@ -630,7 +720,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = CancelarCFDI.class)
     public JAXBElement<String> createCancelarCFDIUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, CancelarCFDI.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, CancelarCFDI.class, value);
     }
 
     /**
@@ -640,321 +730,6 @@ public class ObjectFactory {
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "rFCEmisor", scope = CancelarCFDI.class)
     public JAXBElement<String> createCancelarCFDIRFCEmisor(String value) {
         return new JAXBElement<String>(_CancelacionAsincronaRFCEmisor_QNAME, String.class, CancelarCFDI.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaCancelacion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "CancelarCFDIResult", scope = CancelarCFDIResponse.class)
-    public JAXBElement<RespuestaCancelacion> createCancelarCFDIResponseCancelarCFDIResult(RespuestaCancelacion value) {
-        return new JAXBElement<RespuestaCancelacion>(_CancelarCFDIResponseCancelarCFDIResult_QNAME, RespuestaCancelacion.class, CancelarCFDIResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarTimbrePorReferenciaResult", scope = ConsultarTimbrePorReferenciaResponse.class)
-    public JAXBElement<RespuestaTFD33> createConsultarTimbrePorReferenciaResponseConsultarTimbrePorReferenciaResult(RespuestaTFD33 value) {
-        return new JAXBElement<RespuestaTFD33>(_ConsultarTimbrePorReferenciaResponseConsultarTimbrePorReferenciaResult_QNAME, RespuestaTFD33 .class, ConsultarTimbrePorReferenciaResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "passwordClavePrivada", scope = ProcesarAceptacionRechazo.class)
-    public JAXBElement<String> createProcesarAceptacionRechazoPasswordClavePrivada(String value) {
-        return new JAXBElement<String>(_CancelacionAsincronaPasswordClavePrivada_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ProcesarAceptacionRechazo.class)
-    public JAXBElement<String> createProcesarAceptacionRechazoPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfUUIDProcesarRespuesta }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "uUIDs", scope = ProcesarAceptacionRechazo.class)
-    public JAXBElement<ArrayOfUUIDProcesarRespuesta> createProcesarAceptacionRechazoUUIDs(ArrayOfUUIDProcesarRespuesta value) {
-        return new JAXBElement<ArrayOfUUIDProcesarRespuesta>(_ProcesarAceptacionRechazoUUIDs_QNAME, ArrayOfUUIDProcesarRespuesta.class, ProcesarAceptacionRechazo.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "clavePrivada_Base64", scope = ProcesarAceptacionRechazo.class)
-    public JAXBElement<String> createProcesarAceptacionRechazoClavePrivadaBase64(String value) {
-        return new JAXBElement<String>(_CancelacionAsincronaClavePrivadaBase64_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rFCReceptor", scope = ProcesarAceptacionRechazo.class)
-    public JAXBElement<String> createProcesarAceptacionRechazoRFCReceptor(String value) {
-        return new JAXBElement<String>(_ProcesarAceptacionRechazoRFCReceptor_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ProcesarAceptacionRechazo.class)
-    public JAXBElement<String> createProcesarAceptacionRechazoUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarTimbrePorReferencia.class)
-    public JAXBElement<String> createConsultarTimbrePorReferenciaPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ConsultarTimbrePorReferencia.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarTimbrePorReferencia.class)
-    public JAXBElement<String> createConsultarTimbrePorReferenciaUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ConsultarTimbrePorReferencia.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "referencia", scope = ConsultarTimbrePorReferencia.class)
-    public JAXBElement<String> createConsultarTimbrePorReferenciaReferencia(String value) {
-        return new JAXBElement<String>(_EstatusCancelacionAsincronaReferencia_QNAME, String.class, ConsultarTimbrePorReferencia.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ObtenerAcuseCancelacionResult", scope = ObtenerAcuseCancelacionResponse.class)
-    public JAXBElement<RespuestaTFD33> createObtenerAcuseCancelacionResponseObtenerAcuseCancelacionResult(RespuestaTFD33 value) {
-        return new JAXBElement<RespuestaTFD33>(_ObtenerAcuseCancelacionResponseObtenerAcuseCancelacionResult_QNAME, RespuestaTFD33 .class, ObtenerAcuseCancelacionResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "passwordNuevo", scope = CambiarPassword.class)
-    public JAXBElement<String> createCambiarPasswordPasswordNuevo(String value) {
-        return new JAXBElement<String>(_CambiarPasswordPasswordNuevo_QNAME, String.class, CambiarPassword.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = CambiarPassword.class)
-    public JAXBElement<String> createCambiarPasswordUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, CambiarPassword.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "passwordActual", scope = CambiarPassword.class)
-    public JAXBElement<String> createCambiarPasswordPasswordActual(String value) {
-        return new JAXBElement<String>(_CambiarPasswordPasswordActual_QNAME, String.class, CambiarPassword.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarComplementoTimbreResult", scope = ConsultarComplementoTimbreResponse.class)
-    public JAXBElement<RespuestaTFD33> createConsultarComplementoTimbreResponseConsultarComplementoTimbreResult(RespuestaTFD33 value) {
-        return new JAXBElement<RespuestaTFD33>(_ConsultarComplementoTimbreResponseConsultarComplementoTimbreResult_QNAME, RespuestaTFD33 .class, ConsultarComplementoTimbreResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaCancelacion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "CancelarCFDIConValidacionResult", scope = CancelarCFDIConValidacionResponse.class)
-    public JAXBElement<RespuestaCancelacion> createCancelarCFDIConValidacionResponseCancelarCFDIConValidacionResult(RespuestaCancelacion value) {
-        return new JAXBElement<RespuestaCancelacion>(_CancelarCFDIConValidacionResponseCancelarCFDIConValidacionResult_QNAME, RespuestaCancelacion.class, CancelarCFDIConValidacionResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "passwordClavePrivada", scope = CancelarCFDIConValidacion.class)
-    public JAXBElement<String> createCancelarCFDIConValidacionPasswordClavePrivada(String value) {
-        return new JAXBElement<String>(_CancelacionAsincronaPasswordClavePrivada_QNAME, String.class, CancelarCFDIConValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = CancelarCFDIConValidacion.class)
-    public JAXBElement<String> createCancelarCFDIConValidacionPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, CancelarCFDIConValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "clavePrivada_Base64", scope = CancelarCFDIConValidacion.class)
-    public JAXBElement<String> createCancelarCFDIConValidacionClavePrivadaBase64(String value) {
-        return new JAXBElement<String>(_CancelacionAsincronaClavePrivadaBase64_QNAME, String.class, CancelarCFDIConValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfDetalleCFDICancelacion }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "listaCFDI", scope = CancelarCFDIConValidacion.class)
-    public JAXBElement<ArrayOfDetalleCFDICancelacion> createCancelarCFDIConValidacionListaCFDI(ArrayOfDetalleCFDICancelacion value) {
-        return new JAXBElement<ArrayOfDetalleCFDICancelacion>(_CancelacionAsincronaListaCFDI_QNAME, ArrayOfDetalleCFDICancelacion.class, CancelarCFDIConValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = CancelarCFDIConValidacion.class)
-    public JAXBElement<String> createCancelarCFDIConValidacionUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, CancelarCFDIConValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rFCEmisor", scope = CancelarCFDIConValidacion.class)
-    public JAXBElement<String> createCancelarCFDIConValidacionRFCEmisor(String value) {
-        return new JAXBElement<String>(_CancelacionAsincronaRFCEmisor_QNAME, String.class, CancelarCFDIConValidacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ObtenerPeticionesPendientesCancelacion.class)
-    public JAXBElement<String> createObtenerPeticionesPendientesCancelacionPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ObtenerPeticionesPendientesCancelacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rFCReceptor", scope = ObtenerPeticionesPendientesCancelacion.class)
-    public JAXBElement<String> createObtenerPeticionesPendientesCancelacionRFCReceptor(String value) {
-        return new JAXBElement<String>(_ProcesarAceptacionRechazoRFCReceptor_QNAME, String.class, ObtenerPeticionesPendientesCancelacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ObtenerPeticionesPendientesCancelacion.class)
-    public JAXBElement<String> createObtenerPeticionesPendientesCancelacionUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ObtenerPeticionesPendientesCancelacion.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ObtenerAcuseEnvioResult", scope = ObtenerAcuseEnvioResponse.class)
-    public JAXBElement<RespuestaTFD33> createObtenerAcuseEnvioResponseObtenerAcuseEnvioResult(RespuestaTFD33 value) {
-        return new JAXBElement<RespuestaTFD33>(_ObtenerAcuseEnvioResponseObtenerAcuseEnvioResult_QNAME, RespuestaTFD33 .class, ObtenerAcuseEnvioResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = TimbrarCFDI.class)
-    public JAXBElement<String> createTimbrarCFDIPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, TimbrarCFDI.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = TimbrarCFDI.class)
-    public JAXBElement<String> createTimbrarCFDIUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, TimbrarCFDI.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "cadenaXML", scope = TimbrarCFDI.class)
-    public JAXBElement<String> createTimbrarCFDICadenaXML(String value) {
-        return new JAXBElement<String>(_TimbrarCFDICadenaXML_QNAME, String.class, TimbrarCFDI.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "referencia", scope = TimbrarCFDI.class)
-    public JAXBElement<String> createTimbrarCFDIReferencia(String value) {
-        return new JAXBElement<String>(_EstatusCancelacionAsincronaReferencia_QNAME, String.class, TimbrarCFDI.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaReporte }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarComprobantesResult", scope = ConsultarComprobantesResponse.class)
-    public JAXBElement<RespuestaReporte> createConsultarComprobantesResponseConsultarComprobantesResult(RespuestaReporte value) {
-        return new JAXBElement<RespuestaReporte>(_ConsultarComprobantesResponseConsultarComprobantesResult_QNAME, RespuestaReporte.class, ConsultarComprobantesResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ValidarRFC.class)
-    public JAXBElement<String> createValidarRFCPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ValidarRFC.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ValidarRFC.class)
-    public JAXBElement<String> createValidarRFCUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ValidarRFC.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rfc", scope = ValidarRFC.class)
-    public JAXBElement<String> createValidarRFCRfc(String value) {
-        return new JAXBElement<String>(_ValidarRFCRfc_QNAME, String.class, ValidarRFC.class, value);
     }
 
     /**
@@ -972,7 +747,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarComprobantesRelacionados.class)
     public JAXBElement<String> createConsultarComprobantesRelacionadosPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ConsultarComprobantesRelacionados.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ConsultarComprobantesRelacionados.class, value);
     }
 
     /**
@@ -999,7 +774,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarComprobantesRelacionados.class)
     public JAXBElement<String> createConsultarComprobantesRelacionadosUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ConsultarComprobantesRelacionados.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ConsultarComprobantesRelacionados.class, value);
     }
 
     /**
@@ -1033,63 +808,45 @@ public class ObjectFactory {
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ObtenerAcuseCancelacion.class)
-    public JAXBElement<String> createObtenerAcuseCancelacionPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ObtenerAcuseCancelacion.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ObtenerAcuseEnvio.class)
+    public JAXBElement<String> createObtenerAcuseEnvioPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ObtenerAcuseEnvio.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ObtenerAcuseCancelacion.class)
-    public JAXBElement<String> createObtenerAcuseCancelacionUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ObtenerAcuseCancelacion.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ObtenerAcuseEnvio.class)
+    public JAXBElement<String> createObtenerAcuseEnvioUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ObtenerAcuseEnvio.class, value);
     }
 
     /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "uUID", scope = ObtenerAcuseCancelacion.class)
-    public JAXBElement<String> createObtenerAcuseCancelacionUUID(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUUID_QNAME, String.class, ObtenerAcuseCancelacion.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "uUID", scope = ObtenerAcuseEnvio.class)
+    public JAXBElement<String> createObtenerAcuseEnvioUUID(String value) {
+        return new JAXBElement<String>(_ConsultarComplementoTimbreUUID_QNAME, String.class, ObtenerAcuseEnvio.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaPeticionesPendientes }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ObtenerPeticionesPendientesCancelacionResult", scope = ObtenerPeticionesPendientesCancelacionResponse.class)
-    public JAXBElement<RespuestaPeticionesPendientes> createObtenerPeticionesPendientesCancelacionResponseObtenerPeticionesPendientesCancelacionResult(RespuestaPeticionesPendientes value) {
-        return new JAXBElement<RespuestaPeticionesPendientes>(_ObtenerPeticionesPendientesCancelacionResponseObtenerPeticionesPendientesCancelacionResult_QNAME, RespuestaPeticionesPendientes.class, ObtenerPeticionesPendientesCancelacionResponse.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarTimbrePorReferenciaResult", scope = ConsultarTimbrePorReferenciaResponse.class)
+    public JAXBElement<RespuestaTFD33> createConsultarTimbrePorReferenciaResponseConsultarTimbrePorReferenciaResult(RespuestaTFD33 value) {
+        return new JAXBElement<RespuestaTFD33>(_ConsultarTimbrePorReferenciaResponseConsultarTimbrePorReferenciaResult_QNAME, RespuestaTFD33 .class, ConsultarTimbrePorReferenciaResponse.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaValidacionRFC }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaCreditos }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ValidarRFCResult", scope = ValidarRFCResponse.class)
-    public JAXBElement<RespuestaValidacionRFC> createValidarRFCResponseValidarRFCResult(RespuestaValidacionRFC value) {
-        return new JAXBElement<RespuestaValidacionRFC>(_ValidarRFCResponseValidarRFCResult_QNAME, RespuestaValidacionRFC.class, ValidarRFCResponse.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarCreditos.class)
-    public JAXBElement<String> createConsultarCreditosPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ConsultarCreditos.class, value);
-    }
-
-    /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
-     * 
-     */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarCreditos.class)
-    public JAXBElement<String> createConsultarCreditosUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ConsultarCreditos.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarCreditosResult", scope = ConsultarCreditosResponse.class)
+    public JAXBElement<RespuestaCreditos> createConsultarCreditosResponseConsultarCreditosResult(RespuestaCreditos value) {
+        return new JAXBElement<RespuestaCreditos>(_ConsultarCreditosResponseConsultarCreditosResult_QNAME, RespuestaCreditos.class, ConsultarCreditosResponse.class, value);
     }
 
     /**
@@ -1102,12 +859,129 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaCancelacion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "CancelarCFDIConValidacionResult", scope = CancelarCFDIConValidacionResponse.class)
+    public JAXBElement<RespuestaCancelacion> createCancelarCFDIConValidacionResponseCancelarCFDIConValidacionResult(RespuestaCancelacion value) {
+        return new JAXBElement<RespuestaCancelacion>(_CancelarCFDIConValidacionResponseCancelarCFDIConValidacionResult_QNAME, RespuestaCancelacion.class, CancelarCFDIConValidacionResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarTimbrePorReferencia.class)
+    public JAXBElement<String> createConsultarTimbrePorReferenciaPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ConsultarTimbrePorReferencia.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarTimbrePorReferencia.class)
+    public JAXBElement<String> createConsultarTimbrePorReferenciaUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ConsultarTimbrePorReferencia.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "referencia", scope = ConsultarTimbrePorReferencia.class)
+    public JAXBElement<String> createConsultarTimbrePorReferenciaReferencia(String value) {
+        return new JAXBElement<String>(_EstatusCancelacionAsincronaReferencia_QNAME, String.class, ConsultarTimbrePorReferencia.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "TimbrarCFDIResult", scope = TimbrarCFDIResponse.class)
+    public JAXBElement<RespuestaTFD33> createTimbrarCFDIResponseTimbrarCFDIResult(RespuestaTFD33 value) {
+        return new JAXBElement<RespuestaTFD33>(_TimbrarCFDIResponseTimbrarCFDIResult_QNAME, RespuestaTFD33 .class, TimbrarCFDIResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarTimbrePorSelloResult", scope = ConsultarTimbrePorSelloResponse.class)
+    public JAXBElement<RespuestaTFD33> createConsultarTimbrePorSelloResponseConsultarTimbrePorSelloResult(RespuestaTFD33 value) {
+        return new JAXBElement<RespuestaTFD33>(_ConsultarTimbrePorSelloResponseConsultarTimbrePorSelloResult_QNAME, RespuestaTFD33 .class, ConsultarTimbrePorSelloResponse.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "passwordClavePrivada", scope = CancelarCFDIConValidacion.class)
+    public JAXBElement<String> createCancelarCFDIConValidacionPasswordClavePrivada(String value) {
+        return new JAXBElement<String>(_CancelacionAsincronaPasswordClavePrivada_QNAME, String.class, CancelarCFDIConValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = CancelarCFDIConValidacion.class)
+    public JAXBElement<String> createCancelarCFDIConValidacionPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, CancelarCFDIConValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "clavePrivada_Base64", scope = CancelarCFDIConValidacion.class)
+    public JAXBElement<String> createCancelarCFDIConValidacionClavePrivadaBase64(String value) {
+        return new JAXBElement<String>(_CancelacionAsincronaClavePrivadaBase64_QNAME, String.class, CancelarCFDIConValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfDetalleCFDICancelacion }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "listaCFDI", scope = CancelarCFDIConValidacion.class)
+    public JAXBElement<ArrayOfDetalleCFDICancelacion> createCancelarCFDIConValidacionListaCFDI(ArrayOfDetalleCFDICancelacion value) {
+        return new JAXBElement<ArrayOfDetalleCFDICancelacion>(_CancelacionAsincronaListaCFDI_QNAME, ArrayOfDetalleCFDICancelacion.class, CancelarCFDIConValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = CancelarCFDIConValidacion.class)
+    public JAXBElement<String> createCancelarCFDIConValidacionUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, CancelarCFDIConValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rFCEmisor", scope = CancelarCFDIConValidacion.class)
+    public JAXBElement<String> createCancelarCFDIConValidacionRFCEmisor(String value) {
+        return new JAXBElement<String>(_CancelacionAsincronaRFCEmisor_QNAME, String.class, CancelarCFDIConValidacion.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaAceptacionRechazo }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ProcesarAceptacionRechazoResult", scope = ProcesarAceptacionRechazoResponse.class)
+    public JAXBElement<RespuestaAceptacionRechazo> createProcesarAceptacionRechazoResponseProcesarAceptacionRechazoResult(RespuestaAceptacionRechazo value) {
+        return new JAXBElement<RespuestaAceptacionRechazo>(_ProcesarAceptacionRechazoResponseProcesarAceptacionRechazoResult_QNAME, RespuestaAceptacionRechazo.class, ProcesarAceptacionRechazoResponse.class, value);
+    }
+
+    /**
      * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ObtenerPDF.class)
     public JAXBElement<String> createObtenerPDFPassword(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbrePassword_QNAME, String.class, ObtenerPDF.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ObtenerPDF.class, value);
     }
 
     /**
@@ -1116,7 +990,7 @@ public class ObjectFactory {
      */
     @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ObtenerPDF.class)
     public JAXBElement<String> createObtenerPDFUsuario(String value) {
-        return new JAXBElement<String>(_ConsultarComplementoTimbreUsuario_QNAME, String.class, ObtenerPDF.class, value);
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ObtenerPDF.class, value);
     }
 
     /**
@@ -1138,30 +1012,156 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaReporte }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "TimbrarCFDIResult", scope = TimbrarCFDIResponse.class)
-    public JAXBElement<RespuestaTFD33> createTimbrarCFDIResponseTimbrarCFDIResult(RespuestaTFD33 value) {
-        return new JAXBElement<RespuestaTFD33>(_TimbrarCFDIResponseTimbrarCFDIResult_QNAME, RespuestaTFD33 .class, TimbrarCFDIResponse.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarComprobantesResult", scope = ConsultarComprobantesResponse.class)
+    public JAXBElement<RespuestaReporte> createConsultarComprobantesResponseConsultarComprobantesResult(RespuestaReporte value) {
+        return new JAXBElement<RespuestaReporte>(_ConsultarComprobantesResponseConsultarComprobantesResult_QNAME, RespuestaReporte.class, ConsultarComprobantesResponse.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaCancelacionAsincrona }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "CancelacionAsincronaResult", scope = CancelacionAsincronaResponse.class)
-    public JAXBElement<RespuestaCancelacionAsincrona> createCancelacionAsincronaResponseCancelacionAsincronaResult(RespuestaCancelacionAsincrona value) {
-        return new JAXBElement<RespuestaCancelacionAsincrona>(_CancelacionAsincronaResponseCancelacionAsincronaResult_QNAME, RespuestaCancelacionAsincrona.class, CancelacionAsincronaResponse.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "passwordClavePrivada", scope = ProcesarAceptacionRechazo.class)
+    public JAXBElement<String> createProcesarAceptacionRechazoPasswordClavePrivada(String value) {
+        return new JAXBElement<String>(_CancelacionAsincronaPasswordClavePrivada_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
     }
 
     /**
-     * Create an instance of {@link JAXBElement }{@code <}{@link RespuestaTFD33 }{@code >}}
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
      * 
      */
-    @XmlElementDecl(namespace = "http://tempuri.org/", name = "ConsultarTimbrePorSelloResult", scope = ConsultarTimbrePorSelloResponse.class)
-    public JAXBElement<RespuestaTFD33> createConsultarTimbrePorSelloResponseConsultarTimbrePorSelloResult(RespuestaTFD33 value) {
-        return new JAXBElement<RespuestaTFD33>(_ConsultarTimbrePorSelloResponseConsultarTimbrePorSelloResult_QNAME, RespuestaTFD33 .class, ConsultarTimbrePorSelloResponse.class, value);
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ProcesarAceptacionRechazo.class)
+    public JAXBElement<String> createProcesarAceptacionRechazoPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link ArrayOfUUIDProcesarRespuesta }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "uUIDs", scope = ProcesarAceptacionRechazo.class)
+    public JAXBElement<ArrayOfUUIDProcesarRespuesta> createProcesarAceptacionRechazoUUIDs(ArrayOfUUIDProcesarRespuesta value) {
+        return new JAXBElement<ArrayOfUUIDProcesarRespuesta>(_ProcesarAceptacionRechazoUUIDs_QNAME, ArrayOfUUIDProcesarRespuesta.class, ProcesarAceptacionRechazo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "clavePrivada_Base64", scope = ProcesarAceptacionRechazo.class)
+    public JAXBElement<String> createProcesarAceptacionRechazoClavePrivadaBase64(String value) {
+        return new JAXBElement<String>(_CancelacionAsincronaClavePrivadaBase64_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rFCReceptor", scope = ProcesarAceptacionRechazo.class)
+    public JAXBElement<String> createProcesarAceptacionRechazoRFCReceptor(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionRFCReceptor_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ProcesarAceptacionRechazo.class)
+    public JAXBElement<String> createProcesarAceptacionRechazoUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ProcesarAceptacionRechazo.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ValidarRFC.class)
+    public JAXBElement<String> createValidarRFCPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ValidarRFC.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ValidarRFC.class)
+    public JAXBElement<String> createValidarRFCUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ValidarRFC.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "rfc", scope = ValidarRFC.class)
+    public JAXBElement<String> createValidarRFCRfc(String value) {
+        return new JAXBElement<String>(_ValidarRFCRfc_QNAME, String.class, ValidarRFC.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = ConsultarTimbrePorSello.class)
+    public JAXBElement<String> createConsultarTimbrePorSelloPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, ConsultarTimbrePorSello.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = ConsultarTimbrePorSello.class)
+    public JAXBElement<String> createConsultarTimbrePorSelloUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, ConsultarTimbrePorSello.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "sello", scope = ConsultarTimbrePorSello.class)
+    public JAXBElement<String> createConsultarTimbrePorSelloSello(String value) {
+        return new JAXBElement<String>(_ConsultarTimbrePorSelloSello_QNAME, String.class, ConsultarTimbrePorSello.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "password", scope = TimbrarCFDI.class)
+    public JAXBElement<String> createTimbrarCFDIPassword(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionPassword_QNAME, String.class, TimbrarCFDI.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "usuario", scope = TimbrarCFDI.class)
+    public JAXBElement<String> createTimbrarCFDIUsuario(String value) {
+        return new JAXBElement<String>(_ObtenerPeticionesPendientesCancelacionUsuario_QNAME, String.class, TimbrarCFDI.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "cadenaXML", scope = TimbrarCFDI.class)
+    public JAXBElement<String> createTimbrarCFDICadenaXML(String value) {
+        return new JAXBElement<String>(_TimbrarCFDICadenaXML_QNAME, String.class, TimbrarCFDI.class, value);
+    }
+
+    /**
+     * Create an instance of {@link JAXBElement }{@code <}{@link String }{@code >}}
+     * 
+     */
+    @XmlElementDecl(namespace = "http://tempuri.org/", name = "referencia", scope = TimbrarCFDI.class)
+    public JAXBElement<String> createTimbrarCFDIReferencia(String value) {
+        return new JAXBElement<String>(_EstatusCancelacionAsincronaReferencia_QNAME, String.class, TimbrarCFDI.class, value);
     }
 
 }

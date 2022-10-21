@@ -3610,7 +3610,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                 DecimalFormat formateador = new DecimalFormat("###,###.##");
                 ListaBuscarProducto = consult.productosBuscar(camp);
-                //Constantes.enviaMensajeConsola("ListaBuscarProducto" + ListaBuscarProducto.size());
+                Constantes.enviaMensajeConsola("ListaBuscarProducto" + ListaBuscarProducto.size());
 
                 Iterator LBP = ListaBuscarProducto.iterator();
                 productosBean objB;
@@ -3639,13 +3639,13 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                 }
                 
-                //Constantes.enviaMensajeConsola("sALI DE LA CONSULTA");
+                Constantes.enviaMensajeConsola("sALI DE LA CONSULTA");
 
                 camp.setTOTAL_PRODUCTO_BODEGAS(String.valueOf(local + casa + tenango));
                 
                   
                 ListaCotizaHist = consult.cotizaHist(camp);
-                //Constantes.enviaMensajeConsola("ListaCotizaHist" + ListaCotizaHist.size());
+                Constantes.enviaMensajeConsola("ListaCotizaHist" + ListaCotizaHist.size());
                 
                
 
@@ -3687,7 +3687,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     cantidad = 1;
                 }
 
-                // //Constantes.enviaMensajeConsola("la cantidad de productos a vender es:");
+                Constantes.enviaMensajeConsola("la cantidad de productos a vender es:");
                 Iterator cgeBP = ListaBuscarProductoFinal.iterator();
                 productosBean pbBP;
 
@@ -3715,7 +3715,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     
 
                     precioUniPartida = calculaPrecio(pbBP.getMONEDA(), ganancia, precio, incremento, cantidad, ivacalcula, dolarcalcula );
-                    // precioCal2 = precioUniPartida.getPRECIO_UNITARIO_TOTAL()* cantidad;
+                     //precioCal2 = precioUniPartida.getPRECIO_UNITARIO_TOTAL()* cantidad;
 
                    
                     camp.setTOTAL_PRODUCTO_VENTA(String.valueOf(precioUniPartida.getPRECIO_PARTIDA_TOTAL()));
@@ -3727,15 +3727,15 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     camp.setPRECIO_PARTIDA_TOTAL(precioUniPartida.getPRECIO_PARTIDA_TOTAL());
                     camp.setPRECIO_UNITARIO_TOTAL(precioUniPartida.getPRECIO_UNITARIO_TOTAL());
 
-                    //Constantes.enviaMensajeConsola("+++++++++PRECIOS UNITARIOS++++++++++++++");
-                    //Constantes.enviaMensajeConsola("PRECIO UNITARIO: " + camp.getPRECIO_UNITARIO());
-                    //Constantes.enviaMensajeConsola("IVA UNITARIO: " + camp.getIVA_UNITARIO());
-                    //Constantes.enviaMensajeConsola("PRECIO UNITARIO TOTAL" + camp.getPRECIO_UNITARIO_TOTAL());
+                    Constantes.enviaMensajeConsola("+++++++++PRECIOS UNITARIOS++++++++++++++");
+                    Constantes.enviaMensajeConsola("PRECIO UNITARIO: " + camp.getPRECIO_UNITARIO());
+                    Constantes.enviaMensajeConsola("IVA UNITARIO: " + camp.getIVA_UNITARIO());
+                    Constantes.enviaMensajeConsola("PRECIO UNITARIO TOTAL" + camp.getPRECIO_UNITARIO_TOTAL());
 
-                    //Constantes.enviaMensajeConsola("+++++++++PRECIOS PARTIDAS++++++++++++++");
-                    //Constantes.enviaMensajeConsola("PRECIO PARTIDA: " + camp.getPRECIO_PARTIDA());
-                    //Constantes.enviaMensajeConsola("IVA PARTIDA: " + camp.getIVA_PARTIDA());
-                    //Constantes.enviaMensajeConsola("PRECIO PARTIDA TOTAL " + camp.getPRECIO_PARTIDA_TOTAL());
+                    Constantes.enviaMensajeConsola("+++++++++PRECIOS PARTIDAS++++++++++++++");
+                    Constantes.enviaMensajeConsola("PRECIO PARTIDA: " + camp.getPRECIO_PARTIDA());
+                    Constantes.enviaMensajeConsola("IVA PARTIDA: " + camp.getIVA_PARTIDA());
+                    Constantes.enviaMensajeConsola("PRECIO PARTIDA TOTAL " + camp.getPRECIO_PARTIDA_TOTAL());
 
                     camp.setCATEGORIA(pbBP.getCATEGORIA());
                     camp.setMARCA(pbBP.getMARCA());
@@ -3759,7 +3759,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
 
                 if (ListaProductoHist.size() > 0) {
 
-                    //Constantes.enviaMensajeConsola("ENTRE A CONSULTAR LA HISTORIA DEL PRODUCTO");
+                    Constantes.enviaMensajeConsola("ENTRE A CONSULTAR LA HISTORIA DEL PRODUCTO");
                     Iterator cge = ListaProductoHist.iterator();
 
                     productosBean pb;
@@ -3780,6 +3780,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 }
 
                 ListaProductoAlt = consult.productosBuscarAlt(camp);
+                 Constantes.enviaMensajeConsola("SALI DE CONSULTAR LOS PRODUCTOS ALTERNATIVOS ");
 
                 if (ListaProductoAlt.size() > 0) {
                     Iterator cgeAlt = ListaProductoAlt.iterator();
@@ -3805,14 +3806,19 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                         pbAlt.setPRECIO(String.valueOf(precioUniPartida.getPRECIO_UNITARIO_TOTAL()));
 
                     }
+                      Constantes.enviaMensajeConsola("SALI DE CONSULTAR EL PRECIO DE LOS PRODUCTOS ALTERATIVOS  ");
                 }
+                
+             
 
                 String fecha;
                 fecha = fecha();
                 camp.setFECHA_COTIZA(fecha);
                 camp.setRESPONSABLE(usuariocons.getNAMEUSUARIO());
+                
+                 Constantes.enviaMensajeConsola("TERMINE DE CONSULTAR EL PRODUCTO  ");
 
-                /* ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++*/
+               return "SUCCESS";
             }
         } catch (Exception e) {
              System.out.println(e);
@@ -3875,6 +3881,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
             fecha = fecha();
             camp.setFECHA_COTIZA(fecha);
             camp.setRESPONSABLE(usuariocons.getNAMEUSUARIO());
+          
             ListaProductoAlt = consult.productosBuscarAlt(camp);
 
             int AUXCOTIZA = 0;
@@ -3887,9 +3894,9 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
               total_compara=camp.getPRECIO_UNITARIO_TOTAL()*cantidad;
               diferencia=camp.getPRECIO_PARTIDA_TOTAL()-total_compara;
               
-                if(diferencia<=0.02){              
+                if(diferencia<=1){              
                
-                //Constantes.enviaMensajeConsola("ENTRE A GRADAR LAS VENTAS");
+               // Constantes.enviaMensajeConsola("ENTRE A GRADAR LAS VENTAS");
                 consult.guardaProductoVenta(camp);
                 camp.setPRECIO_PESO("");
                 camp.setCANTIDAD_VENTA("");
@@ -3924,7 +3931,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
               total_compara=camp.getPRECIO_UNITARIO_TOTAL()*cantidad;
               diferencia=camp.getPRECIO_PARTIDA_TOTAL()-total_compara;
                 
-                  if(diferencia<=0.02){      
+                  if(diferencia<=1){      
                 
                 consult.guardaProductoVenta(camp);
 
@@ -4244,11 +4251,11 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 
                  
                // se determina el tipo de entrega                
-                if(local>=Integer.parseInt(camp.getNO_PRODUCTOVENTA())){
+                if(local >= Integer.parseInt(camp.getNO_PRODUCTOVENTA())){
                      camp.setENTREGA("INMEDIATA");
                 }
                 else{
-                    if(total_bodegas>=Integer.parseInt(camp.getNO_PRODUCTOVENTA())){
+                    if(total_bodegas >= Integer.parseInt(camp.getNO_PRODUCTOVENTA())){
                          camp.setENTREGA("TRASPASO");
                     }
                     
@@ -4616,7 +4623,7 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                 camp.setNO_COTIZA(ListaCarroCotizacion.get(c).getNO_COTIZA());
                 camp.setAUX_RFC_CLIENTE(ListaCarroCotizacion.get(c).getRFC_CLIENTE());
 
-                consult.guardaVentaCiclo(conecta, objPreConexion, camp);
+             
 
                 p = 0;
                 vendidos = 0;
@@ -4671,6 +4678,8 @@ public class Consultas_Action extends ActionSupport implements SessionAware {
                     }
                     
                 }
+                
+                   consult.guardaVentaCiclo(conecta, objPreConexion, camp);
 
                 ////// TERMINA TOTAL DE PRODUCTOS POR BODEGA         
                if (local >= vendidos) {

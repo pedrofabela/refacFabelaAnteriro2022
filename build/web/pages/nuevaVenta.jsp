@@ -2,6 +2,19 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <%@ taglib prefix="s" uri="/struts-tags"%>
 <SCRIPT LANGUAGE="JavaScript">
+      window.onload = function () {
+                               
+                var pos = window.name || 0;
+                window.scrollTo(0, pos);
+
+                if (document.getElementById) {
+                    /* variables para ocultar load de ARCHIVO*/
+                     GrdCar = document.getElementById('idfondo'); //se define la variable "el" igual a nuestro div
+                    GrdCar.style.display = (GrdCar.style.display == 'none') ? 'block' : 'none';/* "contenido_a_mostrar" es el nombre que le dimos al DIV */
+                }
+
+            }
+            
 history.forward();
 </SCRIPT>
 
@@ -31,38 +44,19 @@ history.forward();
       }
       
       
-        function muestra_oculta(accion, id) {// ejecuta el loader
-        alert("entre");
-                                                        if (document.getElementById) {
-                                                            
-                                                            alert("id"+ id);
-            //se obtiene el id
-                                                            var GM = document.getElementById(id); //se define la variable "el" igual a nuestro div
-                                                            GM.style.display = (GM.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
-                                                        }
-                                                        alert("voy mandar el formulario");
-                                                        document.forma.action = accion;
-                                                        document.forma.submit();
-                                                    }
+        function muestra_oculta(accion, id) {
+       
+              if (document.getElementById) {                                                    
+                      
+                var GM = document.getElementById(id); //se define la variable "el" igual a nuestro div
+                    GM.style.display = (GM.style.display == 'none') ? 'block' : 'none'; //damos un atributo display:none que oculta el div
+                }
+                alert("voy mandar el formulario");
+                document.forma.action = accion;
+                document.forma.submit();
+            }
 
-
-                                                 
-                window.onload = function() {
-             var pos = window.name || 0;
-                 
-             window.scrollTo(0, pos);
-                 
-                  if (document.getElementById) {
-                     /* variables para ocultar load de ARCHIVO*/
-                    var GrdCar = document.getElementById('idfondo'); //se define la variable "el" igual a nuestro div
-                     GrdCar.style.display = (GrdCar.style.display == 'none') ? 'block' : 'none';/* "contenido_a_mostrar" es el nombre que le dimos al DIV */
-                                                        }
-                 
-                 
-                 
-                 
-                 
-            }               
+          
     </script>
 
 <script type="text/javascript">
@@ -71,17 +65,9 @@ history.forward();
 	
         function hacer_click() { 
              location.href="#popup";
-         
-        
-       
-            
-           
+          
         } 
 	
-       
-       
-
-
 	function hacer_hover()
 	{
 		alert("Estas sobre mi!");
@@ -153,8 +139,17 @@ else {
     </script>
     
     <script type="text/javascript">
+      
 
-        function guarda(accion, id) {
+        function guarda(accion) {             
+            
+          
+            document.forma.action = accion;
+            document.forma.submit();
+       
+        }
+        
+          function guardaLoader(accion, id) {
                if (document.getElementById) {
                      /* variables para ocultar load de ARCHIVO*/
                     var GrdCar = document.getElementById(id); //se define la variable "el" igual a nuestro div
@@ -252,7 +247,7 @@ else {
                                     <div class="div_titulos_sec"> <h2 class="text-tit-sec">Busqueda</h2></div>
                                 <s:textfield name="camp.CONSULTA_PARTE" id="CONSULTA_PARTE" placeholder="Número de Parte" required="true"  cssClass="campoFormBusqueda" onKeyUp="this.value=this.value.toUpperCase();"/>
                                
-                                <a href="Javascript:guarda('buscarProductosVenta','idfondo')"><div class="boton">  Buscar  </div> </a>
+                                <a href="Javascript:guarda('buscarProductosVenta')"><div class="boton">  Buscar  </div> </a>
                                 
                            
                                 <!--TABLA DE UBICACIONES -->
@@ -322,7 +317,7 @@ else {
                                  <div class="div_titulos_sec"> <h2 class="text-tit-sec">Busqueda</h2></div>
                             <s:textfield name="camp.BUSCARCLIENTE" id="camp.BUSCARCLIENTE" placeholder="RFC ó Nombre ó Empresa" required="true"  cssClass="campoFormBusqueda" onKeyUp="this.value=this.value.toUpperCase();"/>
                             
-                              <a href="Javascript:guarda('clientesBuscarVenta','idfondo')"><div class="boton">  Buscar  </div> </a>
+                              <a href="Javascript:guardaLoader('clientesBuscarVenta','idfondo')"><div class="boton">  Buscar  </div> </a>
                               
                               <img src="img/maquina-busqueda.jpg" alt="Maquina" style="width: 90%; margin-top: 20px; margin-bottom: 20px;" ></img>
                             </div>
@@ -978,7 +973,7 @@ else {
 ,'497'
 ,'498'
 ,'499'
-,'500'}" headerValue="Cantidad" onchange="Javascript:guarda('buscarProductosVenta','idfondo')" /></td>
+,'500'}" headerValue="Cantidad" onchange="Javascript:guarda('buscarProductosVenta')" /></td>
                                                 <td style="background: #F0B823; color: black; text-align: center;"><s:textfield name="camp.INCREMENTO" id="INCREMENTO" cssClass="campoFormBusqueda" placeholder="Incremento" cssStyle="width: 30%;" onchange="Javascript:incremento('buscarProductosVenta')" ></s:textfield></td>
                                                 
                                                     <td id="centrar-dato" style="background: green; color: white;"><div style="width: 100%; line-height: 1;">Total Producto</div><s:property value="camp.TOTAL_PRODUCTO_VENTA" /></td>
@@ -1151,7 +1146,7 @@ else {
                                                     <s:if test="camp.NO_VENTA>=1">
                                                         <td id="centrar-dato">  <a href="<s:property value="#myUrl2" />" target="_blank"><img src="img/descarga.png" style="width: 50px; margin-top: 5px;"></img> </a></td>
                                                          </s:if>
-                                                        <td id="centrar-dato">   <a href="Javascript:guarda('clientesBuscarVenta','idfondo')"></a></td>
+                                                        <td id="centrar-dato">   <a href="Javascript:guarda('clientesBuscarVenta')"></a></td>
 
                                                       </tr>
                                                    
@@ -1318,7 +1313,7 @@ else {
                         
                         
 
-                        <div style="width: 100%;"> <a href="Javascript:guarda('generaCotizacion','idfondo')"><div style="width: 120px; height: 30px; background: green; color: white; text-align: center; font-size: 16px; margin: auto; border-radius: 8px;">OK</div></a></div>
+                        <div style="width: 100%;"> <a href="Javascript:guardaLoader('generaCotizacion','idfondo')"><div style="width: 120px; height: 30px; background: green; color: white; text-align: center; font-size: 16px; margin: auto; border-radius: 8px;">OK</div></a></div>
                             
                         
 
@@ -1337,7 +1332,7 @@ else {
                         
                         
 
-                        <div style="width: 100%;"> <a href="Javascript:guarda('generarVenta','idfondo')" onclick="this.onclick=function(){return false}"><div style="width: 120px; height: 30px; background: green; color: white; text-align: center; font-size: 16px; margin: auto; border-radius: 8px;">OK</div></a></div>
+                        <div style="width: 100%;"> <a href="Javascript:guardaLoader('generarVenta','idfondo')" onclick="this.onclick=function(){return false}"><div style="width: 120px; height: 30px; background: green; color: white; text-align: center; font-size: 16px; margin: auto; border-radius: 8px;">OK</div></a></div>
                             
                         
 
